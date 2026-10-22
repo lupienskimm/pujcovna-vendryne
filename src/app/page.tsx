@@ -17,7 +17,7 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <section className="pt-20 pb-16 md:pt-24 md:pb-20">
+      <section className="pt-14 pb-16 md:pt-16 md:pb-20">
         <div className="container-pv">
           <h2 className="section-title">
             Půjčovna

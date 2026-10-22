@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-const themeInitScript = `(function(){try{var b=localStorage.getItem('pv-page-bg');var s=localStorage.getItem('pv-page-style');document.documentElement.dataset.bg=(b==='white'||b==='red'||b==='black')?b:'white';document.documentElement.dataset.style=(s==='classic'||s==='atelier')?s:'classic';}catch(e){document.documentElement.dataset.bg='white';document.documentElement.dataset.style='classic';}})();`;
+const themeInitScript = `(function(){try{var b=localStorage.getItem('pv-page-bg');var s=localStorage.getItem('pv-page-style');var p=localStorage.getItem('pv-page-pattern');document.documentElement.dataset.bg=(b==='white'||b==='red'||b==='black')?b:'white';document.documentElement.dataset.style=(s==='classic'||s==='atelier')?s:'classic';document.documentElement.dataset.pattern=(p==='on'||p==='off')?p:'on';}catch(e){document.documentElement.dataset.bg='white';document.documentElement.dataset.style='classic';document.documentElement.dataset.pattern='on';}})();`;
 
 export default function RootLayout({
   children,
@@ -36,6 +36,7 @@ export default function RootLayout({
       className={`${inter.variable} h-full antialiased`}
       data-bg="white"
       data-style="classic"
+      data-pattern="on"
       suppressHydrationWarning
     >
       <head>

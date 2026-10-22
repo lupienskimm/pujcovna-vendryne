@@ -172,11 +172,29 @@ img {
 }
 
 .search-bar {
+  position: relative;
+  z-index: 5;
   padding: 0.75rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: #fff;
+  color: var(--ink);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+}
+
+.search-bar input[type="search"] {
+  display: block;
+  width: 100%;
+  min-height: 1.75rem;
+  color: var(--ink);
+  background: transparent;
+  -webkit-text-fill-color: var(--ink);
+}
+
+.search-bar input[type="search"]::placeholder {
+  color: var(--muted);
+  -webkit-text-fill-color: var(--muted);
+  opacity: 0.75;
 }
 
 .search-bar-submit {
@@ -344,6 +362,20 @@ img {
 /* —— Page backgrounds —— */
 html[data-bg="white"] body {
   background-color: #f0f0f0;
+  background-image: none;
+}
+
+html[data-bg="red"] body {
+  background-color: #e5322d;
+  background-image: none;
+}
+
+html[data-bg="black"] body {
+  background-color: #121212;
+  background-image: none;
+}
+
+html[data-pattern="on"][data-bg="white"] body {
   background-image:
     linear-gradient(
       135deg,
@@ -355,8 +387,7 @@ html[data-bg="white"] body {
   background-size: auto, 180px 180px;
 }
 
-html[data-bg="red"] body {
-  background-color: #e5322d;
+html[data-pattern="on"][data-bg="red"] body {
   background-image:
     linear-gradient(
       135deg,
@@ -368,8 +399,7 @@ html[data-bg="red"] body {
   background-size: auto, 180px 180px;
 }
 
-html[data-bg="black"] body {
-  background-color: #121212;
+html[data-pattern="on"][data-bg="black"] body {
   background-image:
     linear-gradient(
       135deg,
@@ -391,10 +421,18 @@ html[data-bg="black"] body {
   min-height: calc(100vh - (var(--page-pad) * 2));
   background: #fff;
   border-radius: var(--radius-shell);
-  overflow: clip;
+  overflow: visible;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 18px 50px rgba(0, 0, 0, 0.12);
   transition: width 0.35s ease, box-shadow 0.35s ease, margin 0.35s ease,
     border-radius 0.35s ease;
+}
+
+.site-shell > header {
+  border-radius: var(--radius-shell) var(--radius-shell) 0 0;
+}
+
+.site-shell > footer {
+  border-radius: 0 0 var(--radius-shell) var(--radius-shell);
 }
 
 html[data-bg="white"] .site-shell {
@@ -408,8 +446,11 @@ html[data-bg="white"] .site-shell {
   bottom: 1rem;
   z-index: 60;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  max-width: calc(100vw - 2rem);
   padding: 0.4rem;
   border-radius: var(--radius-btn);
   background: rgba(255, 255, 255, 0.94);
