@@ -81,14 +81,12 @@ export function Reviews() {
   return (
     <section id="recenze" className="overflow-hidden bg-surface py-16 md:py-20">
       <div className="container-pv">
-        <h2 className="text-center text-2xl font-bold uppercase tracking-tight text-ink md:text-3xl">
-          {site.reviewsTitle}
-        </h2>
+        <h2 className="section-title">{site.reviewsTitle}</h2>
         <div className="mt-5 flex justify-center gap-2">
           <button
             type="button"
             aria-label="Předchozí"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-ink transition hover:border-brand hover:text-brand"
+            className="carousel-btn"
             onClick={() => setIndex((i) => (i - 1 + count) % count)}
           >
             ←
@@ -96,7 +94,7 @@ export function Reviews() {
           <button
             type="button"
             aria-label="Další"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-ink transition hover:border-brand hover:text-brand"
+            className="carousel-btn"
             onClick={() => setIndex((i) => (i + 1) % count)}
           >
             →
@@ -113,7 +111,7 @@ export function Reviews() {
                 key={`${r.author}-${r.text.slice(0, 24)}`}
                 className="w-full shrink-0 px-0.5"
               >
-                <div className="mx-auto max-w-2xl rounded-[20px] border border-line bg-white p-6 md:p-8">
+                <div className="pv-card mx-auto max-w-2xl border border-line bg-white p-6 md:p-8">
                   <div className="flex items-center gap-3">
                     <Avatar src={r.avatar} name={r.author} />
                     <div className="min-w-0">

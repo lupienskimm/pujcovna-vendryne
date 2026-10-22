@@ -16,7 +16,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-brand text-white">
+    <header className="site-header sticky top-0 z-50">
       <div className="container-pv flex h-14 items-center justify-between gap-4 md:h-[3.75rem]">
         <Link
           href="/"
@@ -41,11 +41,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                  active
-                    ? "bg-white text-brand"
-                    : "text-white hover:bg-white/15"
-                }`}
+                className={`nav-link${active ? " is-active" : ""}`}
               >
                 {item.label}
               </Link>
@@ -53,7 +49,7 @@ export function Header() {
           })}
           <a
             href={`tel:${site.phone.replace(/\s/g, "")}`}
-            className="ml-2 inline-flex !min-h-10 items-center justify-center rounded-full bg-white px-4 text-sm font-semibold text-brand transition-opacity hover:opacity-90"
+            className="header-phone"
           >
             {site.phoneDisplay}
           </a>
@@ -61,29 +57,29 @@ export function Header() {
 
         <button
           type="button"
-          className="nav-mobile-btn h-10 w-10 items-center justify-center rounded-full border border-white/30"
+          className="nav-mobile-btn header-menu-btn"
           aria-label="Menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
           <span className="sr-only">Menu</span>
           <span className="flex w-4 flex-col gap-1">
-            <span className="h-0.5 w-full bg-white" />
-            <span className="h-0.5 w-full bg-white" />
-            <span className="h-0.5 w-full bg-white" />
+            <span className="header-menu-bar" />
+            <span className="header-menu-bar" />
+            <span className="header-menu-bar" />
           </span>
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-white/15 px-4 py-3 md:hidden">
+        <div className="header-mobile-panel md:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobilní menu">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-2.5 text-sm font-medium hover:bg-white/15"
+                className="nav-link-mobile"
               >
                 {item.label}
               </Link>

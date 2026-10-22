@@ -4,18 +4,18 @@ import { site } from "@/data/site";
 import { SearchBar } from "./SearchBar";
 
 const HERO_BG =
-  "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2400&q=80";
+  "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=2400";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-ink text-white">
+    <section className="hero-panel relative overflow-hidden bg-ink text-white">
       <div className="absolute inset-0">
         <Image
           src={HERO_BG}
           alt=""
           fill
           priority
-          className="object-cover object-[center_35%] opacity-55"
+          className="object-cover object-[center_45%] opacity-50"
           sizes="100vw"
         />
         <div
@@ -28,7 +28,7 @@ export function Hero() {
       </div>
 
       <div className="container-pv relative pb-24 pt-14 md:pb-28 md:pt-20">
-        <p className="animate-fade-up text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+        <p className="hero-eyebrow animate-fade-up text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
           {site.name}
         </p>
         <h1 className="animate-fade-up delay-1 mt-3 max-w-3xl text-3xl font-bold leading-[1.12] tracking-tight md:text-5xl">

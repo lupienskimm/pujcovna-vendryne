@@ -20,7 +20,7 @@ export function SearchBar({ className = "" }: { className?: string }) {
   return (
     <form
       onSubmit={onSubmit}
-      className={`flex flex-col gap-3 rounded-[20px] border border-line bg-white p-3 shadow-[0_18px_50px_rgba(0,0,0,0.12)] sm:flex-row sm:items-center ${className}`}
+      className={`search-bar flex flex-col gap-3 sm:flex-row sm:items-center ${className}`}
       role="search"
     >
       <label className="flex min-w-0 flex-1 flex-col gap-1 px-2">
@@ -34,7 +34,7 @@ export function SearchBar({ className = "" }: { className?: string }) {
           className="w-full border-0 bg-transparent text-[15px] text-ink outline-none placeholder:text-muted/70"
         />
       </label>
-      <button type="submit" className="btn btn-dark shrink-0 !rounded-2xl sm:!min-w-32">
+      <button type="submit" className="btn btn-dark search-bar-submit shrink-0 sm:!min-w-32">
         Hledat
       </button>
     </form>

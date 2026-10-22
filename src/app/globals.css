@@ -9,6 +9,13 @@
   --surface: #f4f4f4;
   --background: #ffffff;
   --foreground: #141414;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-btn: 999px;
+  --radius-shell: 18px;
+  --header-bg: var(--brand);
+  --header-fg: #ffffff;
+  --card-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
 }
 
 @theme {
@@ -21,6 +28,7 @@
 
 html {
   scroll-behavior: smooth;
+  --page-pad: clamp(0.5rem, 2.5vw, 1.75rem);
 }
 
 body {
@@ -28,6 +36,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-attachment: fixed;
+  transition: background-color 0.35s ease;
 }
 
 a {
@@ -83,6 +93,19 @@ img {
   margin-inline: auto;
 }
 
+.section-title {
+  text-align: center;
+  font-size: clamp(1.35rem, 2.4vw, 1.875rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.section-title-left {
+  text-align: left;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -90,12 +113,12 @@ img {
   gap: 0.5rem;
   min-height: 2.75rem;
   padding: 0.65rem 1.35rem;
-  border-radius: 999px;
+  border-radius: var(--radius-btn);
   font-weight: 600;
   font-size: 0.95rem;
   line-height: 1;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .btn:hover {
@@ -131,13 +154,61 @@ img {
   background: #000;
 }
 
+.pv-card {
+  border-radius: var(--radius-lg);
+}
+
+.pv-card-media {
+  border-radius: var(--radius-md);
+}
+
 .card-lift {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.2s ease;
 }
 
 .card-lift:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--card-shadow);
+}
+
+.search-bar {
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+}
+
+.search-bar-submit {
+  border-radius: calc(var(--radius-lg) - 4px) !important;
+}
+
+.map-frame {
+  border-radius: calc(var(--radius-lg) + 4px);
+  box-shadow: 0 12px 40px rgba(229, 50, 45, 0.18);
+}
+
+.map-frame-inner {
+  border-radius: var(--radius-md);
+}
+
+.carousel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.carousel-btn:hover {
+  border-color: var(--brand);
+  color: var(--brand);
 }
 
 @keyframes fade-up {
@@ -163,6 +234,12 @@ img {
 }
 .delay-3 {
   animation-delay: 0.24s;
+}
+
+/* —— Header (classic) —— */
+.site-header {
+  background: var(--header-bg);
+  color: var(--header-fg);
 }
 
 .header-logo-img {
@@ -196,17 +273,75 @@ img {
   }
 }
 
-/* Page background themes — low-poly inspired by pujcovnavendryne.cz */
-html {
-  --page-pad: clamp(0.5rem, 2.5vw, 1.75rem);
+.nav-link {
+  border-radius: var(--radius-btn);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-body {
-  background-color: #fff;
-  background-attachment: fixed;
-  transition: background-color 0.35s ease;
+.nav-link.is-active {
+  background: #fff;
+  color: var(--brand);
 }
 
+.nav-link:not(.is-active):hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.header-phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  margin-left: 0.5rem;
+  padding: 0 1rem;
+  border-radius: var(--radius-btn);
+  background: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--brand);
+  transition: opacity 0.2s ease;
+}
+
+.header-phone:hover {
+  opacity: 0.9;
+}
+
+.header-menu-btn {
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-btn);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-menu-bar {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+}
+
+.header-mobile-panel {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.75rem 1rem;
+}
+
+.nav-link-mobile {
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.nav-link-mobile:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* —— Page backgrounds —— */
 html[data-bg="white"] body {
   background-color: #f0f0f0;
   background-image:
@@ -255,62 +390,290 @@ html[data-bg="black"] body {
   flex-direction: column;
   min-height: calc(100vh - (var(--page-pad) * 2));
   background: #fff;
-  border-radius: 18px;
+  border-radius: var(--radius-shell);
   overflow: clip;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 18px 50px rgba(0, 0, 0, 0.12);
-  transition: width 0.35s ease, box-shadow 0.35s ease, margin 0.35s ease;
+  transition: width 0.35s ease, box-shadow 0.35s ease, margin 0.35s ease,
+    border-radius 0.35s ease;
 }
 
 html[data-bg="white"] .site-shell {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 14px 40px rgba(0, 0, 0, 0.08);
 }
 
-.bg-switcher {
+/* —— Theme dock —— */
+.theme-dock {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
   z-index: 60;
   display: flex;
-  gap: 0.4rem;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.4rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
+  border-radius: var(--radius-btn);
+  background: rgba(255, 255, 255, 0.94);
   border: 1px solid var(--line);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
-  backdrop-filter: blur(8px);
 }
 
-.bg-switcher-btn {
+.theme-dock-group {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.theme-dock-sep {
+  width: 1px;
+  height: 1.5rem;
+  background: var(--line);
+}
+
+.theme-dock-style {
+  border: 0;
+  background: transparent;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-btn);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.theme-dock-style.is-active {
+  background: var(--ink);
+  color: #fff;
+}
+
+.theme-dock-swatch-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 2rem;
   height: 2rem;
   padding: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-btn);
   border: 2px solid transparent;
   background: transparent;
   cursor: pointer;
-  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.bg-switcher-btn:hover {
-  transform: scale(1.06);
-}
-
-.bg-switcher-btn.is-active {
+.theme-dock-swatch-btn.is-active {
   border-color: var(--brand);
 }
 
-.bg-switcher-swatch {
+.theme-dock-swatch {
   width: 1.25rem;
   height: 1.25rem;
-  border-radius: 999px;
+  border-radius: var(--radius-btn);
   border: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 }
 
-.bg-switcher-btn:first-child .bg-switcher-swatch {
-  border-color: #d0d0d0;
+/* =========================================================
+   ATELIÉR — industriální katalog, Minoda DNA, bez AI slopu
+   ========================================================= */
+html[data-style="atelier"] {
+  --ink: #0b0b0b;
+  --muted: #5a5a5a;
+  --line: #d2d2d0;
+  --surface: #ececea;
+  --radius-lg: 0px;
+  --radius-md: 0px;
+  --radius-btn: 0px;
+  --radius-shell: 0px;
+  --header-bg: #0b0b0b;
+  --header-fg: #ffffff;
+  --card-shadow: none;
 }
 
+html[data-style="atelier"] body {
+  letter-spacing: 0.005em;
+}
+
+html[data-style="atelier"] .site-shell {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+html[data-style="atelier"] .site-header {
+  border-bottom: 3px solid var(--brand);
+}
+
+html[data-style="atelier"] .nav-link {
+  border-radius: 0;
+  padding: 0.45rem 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+html[data-style="atelier"] .nav-link.is-active {
+  background: var(--brand);
+  color: #fff;
+}
+
+html[data-style="atelier"] .nav-link:not(.is-active):hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html[data-style="atelier"] .header-phone {
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+}
+
+html[data-style="atelier"] .header-phone:hover {
+  border-color: #fff;
+  background: var(--brand);
+  opacity: 1;
+}
+
+html[data-style="atelier"] .header-menu-btn {
+  border-radius: 0;
+}
+
+html[data-style="atelier"] .btn {
+  border-radius: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+html[data-style="atelier"] .btn:hover {
+  transform: none;
+}
+
+html[data-style="atelier"] .btn-primary {
+  box-shadow: 3px 3px 0 #000;
+}
+
+html[data-style="atelier"] .btn-primary:hover {
+  background: var(--brand);
+  box-shadow: 1px 1px 0 #000;
+}
+
+html[data-style="atelier"] .btn-ghost {
+  border-width: 1px;
+  border-radius: 0;
+}
+
+html[data-style="atelier"] .btn-dark {
+  box-shadow: 3px 3px 0 var(--brand);
+}
+
+html[data-style="atelier"] .section-title {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  padding-bottom: 0.65rem;
+  letter-spacing: 0.14em;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+html[data-style="atelier"] .section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 2.5rem;
+  height: 3px;
+  transform: translateX(-50%);
+  background: var(--brand);
+}
+
+html[data-style="atelier"] .section-title-left {
+  margin-inline: 0;
+}
+
+html[data-style="atelier"] .section-title-left::after {
+  left: 0;
+  transform: none;
+}
+
+html[data-style="atelier"] .pv-card {
+  border-radius: 0;
+  border-color: #cfcfcb;
+  box-shadow: none;
+}
+
+html[data-style="atelier"] .card-lift:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--brand);
+  background: #fafaf8;
+}
+
+html[data-style="atelier"] .pv-card-media {
+  border-radius: 0;
+}
+
+html[data-style="atelier"] .search-bar {
+  border-radius: 0;
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0 rgba(229, 50, 45, 0.85);
+}
+
+html[data-style="atelier"] .search-bar-submit {
+  border-radius: 0 !important;
+}
+
+html[data-style="atelier"] .map-frame {
+  border-radius: 0;
+  box-shadow: 8px 8px 0 #0b0b0b;
+  padding: 0.35rem !important;
+}
+
+html[data-style="atelier"] .map-frame-inner {
+  border-radius: 0;
+  border-width: 0;
+}
+
+html[data-style="atelier"] .carousel-btn {
+  border-radius: 0;
+  border-width: 1.5px;
+  border-color: var(--ink);
+  font-weight: 700;
+}
+
+html[data-style="atelier"] .carousel-btn:hover {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+html[data-style="atelier"] .theme-dock {
+  border-radius: 0;
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: none;
+}
+
+html[data-style="atelier"] .theme-dock-style {
+  border-radius: 0;
+}
+
+html[data-style="atelier"] .theme-dock-swatch-btn,
+html[data-style="atelier"] .theme-dock-swatch {
+  border-radius: 0;
+}
+
+html[data-style="atelier"] footer {
+  border-top: 3px solid var(--brand);
+}
+
+html[data-style="atelier"] .hero-eyebrow {
+  letter-spacing: 0.28em;
+}
+
+/* Hero tweaks when atelier */
+html[data-style="atelier"] .hero-panel h1 {
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}

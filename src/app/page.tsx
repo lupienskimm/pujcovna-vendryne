@@ -19,7 +19,7 @@ export default function HomePage() {
 
       <section className="pt-20 pb-16 md:pt-24 md:pb-20">
         <div className="container-pv">
-          <h2 className="text-center text-2xl font-bold uppercase tracking-tight text-ink md:text-3xl">
+          <h2 className="section-title">
             Půjčovna
           </h2>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -44,7 +44,7 @@ export default function HomePage() {
       <section className="border-y border-line bg-white py-16 md:py-20">
         <div className="container-pv grid items-center gap-10 md:grid-cols-2">
           <div>
-            <h2 className="text-2xl font-bold uppercase tracking-tight text-ink md:text-3xl">
+            <h2 className="section-title section-title-left">
               {site.serviceTitle}
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted">
