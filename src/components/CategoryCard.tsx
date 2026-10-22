@@ -13,7 +13,7 @@ export function CategoryCard({ category }: { category: Category }) {
           {category.name}
         </h3>
       </div>
-      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl bg-surface">
+      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl bg-white">
         {category.image ? (
           <Image
             src={category.image}

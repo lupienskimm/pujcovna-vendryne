@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CategoryCard } from "@/components/CategoryCard";
 import { Hero } from "@/components/Hero";
+import { MapBlock } from "@/components/MapBlock";
 import { ProductCard } from "@/components/ProductCard";
 import { Reviews } from "@/components/Reviews";
 import { categories, site } from "@/data/site";
@@ -18,7 +19,7 @@ export default function HomePage() {
 
       <section className="pt-20 pb-16 md:pt-24 md:pb-20">
         <div className="container-pv">
-          <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+          <h2 className="text-center text-2xl font-bold uppercase tracking-tight text-ink md:text-3xl">
             Půjčovna
           </h2>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -43,7 +44,7 @@ export default function HomePage() {
       <section className="border-y border-line bg-white py-16 md:py-20">
         <div className="container-pv grid items-center gap-10 md:grid-cols-2">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
+            <h2 className="text-2xl font-bold uppercase tracking-tight text-ink md:text-3xl">
               {site.serviceTitle}
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted">
@@ -56,12 +57,13 @@ export default function HomePage() {
               {site.phoneAlt}
             </a>
           </div>
-          <div className="relative aspect-[16/11] overflow-hidden rounded-[20px] bg-surface">
+          <div className="overflow-hidden rounded-[20px] bg-white">
             <Image
               src={site.heroImage}
               alt={site.heroTitle}
-              fill
-              className="object-cover"
+              width={1200}
+              height={630}
+              className="h-auto w-full object-contain"
               sizes="(max-width:768px) 100vw, 50vw"
             />
           </div>
@@ -70,22 +72,7 @@ export default function HomePage() {
 
       <Reviews />
 
-      <section className="py-16 md:py-20">
-        <div className="container-pv">
-          <h2 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
-            {site.mapTitle}
-          </h2>
-          <div className="mt-6 overflow-hidden rounded-[20px] border border-line">
-            <iframe
-              title={site.address}
-              src={`https://maps.google.com/maps?q=${encodeURIComponent(site.address)}&z=15&output=embed`}
-              className="h-[360px] w-full border-0 md:h-[420px]"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </div>
-      </section>
+      <MapBlock />
     </>
   );
 }

@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 import { SearchBar } from "./SearchBar";
 
 const HERO_BG =
-  "https://www.pujcovnavendryne.cz/wp-content/uploads/2021/05/Takeuchi-TB-210-siroko.jpg";
+  "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2400&q=80";
 
 export function Hero() {
   return (
@@ -15,7 +15,7 @@ export function Hero() {
           alt=""
           fill
           priority
-          className="object-cover object-[center_40%] opacity-50"
+          className="object-cover object-[center_35%] opacity-55"
           sizes="100vw"
         />
         <div

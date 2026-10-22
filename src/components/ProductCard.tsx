@@ -23,7 +23,7 @@ export function ProductCard({
       href={`/pujcovna/${product.categorySlug}/${product.slug}`}
       className="card-lift group flex h-full flex-col overflow-hidden rounded-[18px] border border-line bg-white"
     >
-      <div className="relative aspect-[4/3] bg-surface">
+      <div className="relative aspect-[4/3] bg-white">
         {product.image ? (
           <Image
             src={product.image}

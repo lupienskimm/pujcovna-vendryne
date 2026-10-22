@@ -65,14 +65,16 @@ export default function KontaktPage() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[20px] border border-line">
-            <iframe
-              title={site.address}
-              src={`https://maps.google.com/maps?q=${encodeURIComponent(site.address)}&z=15&output=embed`}
-              className="h-full min-h-[420px] w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+          <div className="rounded-[22px] bg-brand p-2 shadow-[0_12px_40px_rgba(229,50,45,0.18)] md:p-2.5">
+            <div className="overflow-hidden rounded-[16px] border-[3px] border-white bg-white">
+              <iframe
+                title={site.address}
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(site.address)}&z=15&output=embed`}
+                className="h-full min-h-[420px] w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </div>

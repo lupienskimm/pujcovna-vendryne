@@ -46,7 +46,7 @@ export default async function ProductPage({ params }: Props) {
         </nav>
 
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_1fr]">
-          <div className="relative aspect-square overflow-hidden rounded-[20px] border border-line bg-surface lg:aspect-[4/3]">
+          <div className="relative aspect-square overflow-hidden rounded-[20px] border border-line bg-white lg:aspect-[4/3]">
             {product.image ? (
               <Image
                 src={product.image}

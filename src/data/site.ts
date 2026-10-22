@@ -25,7 +25,6 @@ export type Category = {
 };
 
 export const site = catalog.site;
-export const reviews = catalog.reviews;
 export const categories = catalog.categories as Category[];
 
 export function getCategory(slug: string): Category | undefined {
