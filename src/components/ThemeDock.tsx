@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export type PageBg = "white" | "red" | "black";
-export type PageStyle = "classic" | "atelier";
+export type PageStyle = "classic" | "atelier" | "linka" | "panel" | "ram";
 export type PagePattern = "on" | "off";
 
 const BG_OPTIONS: { id: PageBg; label: string; swatch: string }[] = [
@@ -15,7 +15,12 @@ const BG_OPTIONS: { id: PageBg; label: string; swatch: string }[] = [
 const STYLE_OPTIONS: { id: PageStyle; label: string }[] = [
   { id: "classic", label: "Klasik" },
   { id: "atelier", label: "Ateliér" },
+  { id: "linka", label: "Linka" },
+  { id: "panel", label: "Panel" },
+  { id: "ram", label: "Rám" },
 ];
+
+const STYLE_IDS = new Set(STYLE_OPTIONS.map((o) => o.id));
 
 const PATTERN_OPTIONS: { id: PagePattern; label: string }[] = [
   { id: "on", label: "Vzor" },
@@ -43,10 +48,9 @@ export function ThemeDock() {
       savedBg === "white" || savedBg === "red" || savedBg === "black"
         ? savedBg
         : "white";
-    const nextStyle =
-      savedStyle === "classic" || savedStyle === "atelier"
-        ? savedStyle
-        : "classic";
+    const nextStyle = STYLE_IDS.has(savedStyle as PageStyle)
+      ? (savedStyle as PageStyle)
+      : "classic";
     const nextPattern =
       savedPattern === "on" || savedPattern === "off" ? savedPattern : "on";
 
@@ -79,7 +83,7 @@ export function ThemeDock() {
 
   return (
     <div className="theme-dock" aria-label="Vzhled stránky">
-      <div className="theme-dock-group" role="group" aria-label="Styl webu">
+      <div className="theme-dock-group theme-dock-styles" role="group" aria-label="Styl webu">
         {STYLE_OPTIONS.map((opt) => (
           <button
             key={opt.id}
