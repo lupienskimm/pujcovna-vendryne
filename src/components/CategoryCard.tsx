@@ -6,7 +6,7 @@ export function CategoryCard({ category }: { category: Category }) {
   return (
     <Link
       href={`/pujcovna/${category.slug}`}
-      className="pv-card card-lift group flex items-center justify-between gap-4 border border-line bg-white p-4"
+      className="pv-card card-lift group flex items-center justify-between gap-4 p-4"
     >
       <div className="min-w-0">
         <h3 className="truncate text-[15px] font-semibold text-ink group-hover:text-brand">

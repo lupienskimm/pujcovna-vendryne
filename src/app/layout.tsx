@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-const themeInitScript = `(function(){try{var styles={classic:1,atelier:1,linka:1,panel:1,ram:1};var b=localStorage.getItem('pv-page-bg');var s=localStorage.getItem('pv-page-style');var p=localStorage.getItem('pv-page-pattern');document.documentElement.dataset.bg=(b==='white'||b==='red'||b==='black')?b:'white';document.documentElement.dataset.style=styles[s]?s:'classic';document.documentElement.dataset.pattern=(p==='on'||p==='off')?p:'on';}catch(e){document.documentElement.dataset.bg='white';document.documentElement.dataset.style='classic';document.documentElement.dataset.pattern='on';}})();`;
+const themeInitScript = `(function(){try{var b=localStorage.getItem('pv-page-bg');var l=localStorage.getItem('pv-page-layout');var p=localStorage.getItem('pv-page-pattern');document.documentElement.dataset.bg=(b==='white'||b==='red'||b==='black')?b:'white';document.documentElement.dataset.layout=(l==='page'||l==='island')?l:'page';document.documentElement.dataset.pattern=(p==='on'||p==='off')?p:'on';}catch(e){document.documentElement.dataset.bg='white';document.documentElement.dataset.layout='page';document.documentElement.dataset.pattern='on';}})();`;
 
 export default function RootLayout({
   children,
@@ -35,7 +35,7 @@ export default function RootLayout({
       lang="cs"
       className={`${inter.variable} h-full antialiased`}
       data-bg="white"
-      data-style="classic"
+      data-layout="page"
       data-pattern="on"
       suppressHydrationWarning
     >

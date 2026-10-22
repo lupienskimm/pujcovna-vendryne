@@ -32,7 +32,7 @@ export default async function CategoryPage({ params }: Props) {
           <span className="mx-2">/</span>
           <span className="text-ink">{category.name}</span>
         </nav>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-ink md:text-4xl">
+        <h1 className="page-heading mt-4 text-3xl font-bold tracking-tight text-ink md:text-4xl">
           {category.name}
         </h1>
 

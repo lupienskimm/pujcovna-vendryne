@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export type PageBg = "white" | "red" | "black";
-export type PageStyle = "classic" | "atelier" | "linka" | "panel" | "ram";
+export type PageLayout = "page" | "island";
 export type PagePattern = "on" | "off";
 
 const BG_OPTIONS: { id: PageBg; label: string; swatch: string }[] = [
@@ -12,15 +12,10 @@ const BG_OPTIONS: { id: PageBg; label: string; swatch: string }[] = [
   { id: "black", label: "Černá", swatch: "#141414" },
 ];
 
-const STYLE_OPTIONS: { id: PageStyle; label: string }[] = [
-  { id: "classic", label: "Klasik" },
-  { id: "atelier", label: "Ateliér" },
-  { id: "linka", label: "Linka" },
-  { id: "panel", label: "Panel" },
-  { id: "ram", label: "Rám" },
+const LAYOUT_OPTIONS: { id: PageLayout; label: string }[] = [
+  { id: "page", label: "Plná" },
+  { id: "island", label: "Ostrov" },
 ];
-
-const STYLE_IDS = new Set(STYLE_OPTIONS.map((o) => o.id));
 
 const PATTERN_OPTIONS: { id: PagePattern; label: string }[] = [
   { id: "on", label: "Vzor" },
@@ -28,18 +23,20 @@ const PATTERN_OPTIONS: { id: PagePattern; label: string }[] = [
 ];
 
 const BG_KEY = "pv-page-bg";
-const STYLE_KEY = "pv-page-style";
+const LAYOUT_KEY = "pv-page-layout";
 const PATTERN_KEY = "pv-page-pattern";
 
 export function ThemeDock() {
   const [bg, setBg] = useState<PageBg>("white");
-  const [style, setStyle] = useState<PageStyle>("classic");
+  const [layout, setLayout] = useState<PageLayout>("page");
   const [pattern, setPattern] = useState<PagePattern>("on");
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const savedBg = window.localStorage.getItem(BG_KEY) as PageBg | null;
-    const savedStyle = window.localStorage.getItem(STYLE_KEY) as PageStyle | null;
+    const savedLayout = window.localStorage.getItem(
+      LAYOUT_KEY
+    ) as PageLayout | null;
     const savedPattern = window.localStorage.getItem(
       PATTERN_KEY
     ) as PagePattern | null;
@@ -48,17 +45,16 @@ export function ThemeDock() {
       savedBg === "white" || savedBg === "red" || savedBg === "black"
         ? savedBg
         : "white";
-    const nextStyle = STYLE_IDS.has(savedStyle as PageStyle)
-      ? (savedStyle as PageStyle)
-      : "classic";
+    const nextLayout =
+      savedLayout === "page" || savedLayout === "island" ? savedLayout : "page";
     const nextPattern =
       savedPattern === "on" || savedPattern === "off" ? savedPattern : "on";
 
     setBg(nextBg);
-    setStyle(nextStyle);
+    setLayout(nextLayout);
     setPattern(nextPattern);
     document.documentElement.dataset.bg = nextBg;
-    document.documentElement.dataset.style = nextStyle;
+    document.documentElement.dataset.layout = nextLayout;
     document.documentElement.dataset.pattern = nextPattern;
     setReady(true);
   }, []);
@@ -71,9 +67,9 @@ export function ThemeDock() {
 
   useEffect(() => {
     if (!ready) return;
-    document.documentElement.dataset.style = style;
-    window.localStorage.setItem(STYLE_KEY, style);
-  }, [style, ready]);
+    document.documentElement.dataset.layout = layout;
+    window.localStorage.setItem(LAYOUT_KEY, layout);
+  }, [layout, ready]);
 
   useEffect(() => {
     if (!ready) return;
@@ -83,14 +79,14 @@ export function ThemeDock() {
 
   return (
     <div className="theme-dock" aria-label="Vzhled stránky">
-      <div className="theme-dock-group theme-dock-styles" role="group" aria-label="Styl webu">
-        {STYLE_OPTIONS.map((opt) => (
+      <div className="theme-dock-group" role="group" aria-label="Layout stránky">
+        {LAYOUT_OPTIONS.map((opt) => (
           <button
             key={opt.id}
             type="button"
-            className={`theme-dock-style${style === opt.id ? " is-active" : ""}`}
-            aria-pressed={style === opt.id}
-            onClick={() => setStyle(opt.id)}
+            className={`theme-dock-style${layout === opt.id ? " is-active" : ""}`}
+            aria-pressed={layout === opt.id}
+            onClick={() => setLayout(opt.id)}
           >
             {opt.label}
           </button>

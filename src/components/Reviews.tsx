@@ -111,7 +111,7 @@ export function Reviews() {
                 key={`${r.author}-${r.text.slice(0, 24)}`}
                 className="w-full shrink-0 px-0.5"
               >
-                <div className="pv-card mx-auto max-w-2xl border border-line bg-white p-6 md:p-8">
+                <div className="pv-card mx-auto max-w-2xl p-6 md:p-8">
                   <div className="flex items-center gap-3">
                     <Avatar src={r.avatar} name={r.author} />
                     <div className="min-w-0">

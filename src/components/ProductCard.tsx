@@ -21,7 +21,7 @@ export function ProductCard({
   return (
     <Link
       href={`/pujcovna/${product.categorySlug}/${product.slug}`}
-      className="pv-card card-lift group flex h-full flex-col overflow-hidden border border-line bg-white"
+      className="pv-card card-lift group flex h-full flex-col overflow-hidden"
     >
       <div className="relative aspect-[4/3] bg-white">
         {product.image ? (

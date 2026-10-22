@@ -18,7 +18,7 @@ export default async function PujcovnaPage({ searchParams }: Props) {
   return (
     <div className="pb-16 pt-10 md:pb-20 md:pt-12">
       <div className="container-pv">
-        <h1 className="text-3xl font-bold tracking-tight text-ink md:text-4xl">
+        <h1 className="page-heading text-3xl font-bold tracking-tight text-ink md:text-4xl">
           Půjčovna
         </h1>
         <div className="mt-6 max-w-3xl">

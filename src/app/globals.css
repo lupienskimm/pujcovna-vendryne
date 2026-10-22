@@ -5,17 +5,23 @@
   --brand-dark: #c42b26;
   --ink: #141414;
   --muted: #5c5c5c;
-  --line: #e8e8e8;
-  --surface: #f4f4f4;
+  --line: #dddddd;
+  --surface: #efefef;
   --background: #ffffff;
   --foreground: #141414;
-  --radius-lg: 18px;
-  --radius-md: 12px;
-  --radius-btn: 999px;
-  --radius-shell: 18px;
+  --radius-lg: 10px;
+  --radius-md: 8px;
+  --radius-btn: 8px;
+  --radius-shell: 0px;
   --header-bg: var(--brand);
   --header-fg: #ffffff;
-  --card-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  --card-shadow: none;
+  --card-hover-bg: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #fff8f7 48%,
+    #ffe9e7 100%
+  );
 }
 
 @theme {
@@ -28,7 +34,6 @@
 
 html {
   scroll-behavior: smooth;
-  --page-pad: clamp(0.5rem, 2.5vw, 1.75rem);
 }
 
 body {
@@ -95,15 +100,29 @@ img {
 
 .section-title {
   text-align: center;
-  font-size: clamp(1.35rem, 2.4vw, 1.875rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink);
 }
 
+.section-title::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 6px;
+  margin: 0 auto 0.75rem;
+  background: var(--brand);
+}
+
 .section-title-left {
   text-align: left;
+}
+
+.section-title-left::before {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .btn {
@@ -111,10 +130,10 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 2.75rem;
+  min-height: 3rem;
   padding: 0.65rem 1.35rem;
   border-radius: var(--radius-btn);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
   line-height: 1;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease,
@@ -122,12 +141,13 @@ img {
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .btn-primary {
   background: var(--brand);
   color: #fff;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.18);
 }
 
 .btn-primary:hover {
@@ -156,30 +176,41 @@ img {
 
 .pv-card {
   border-radius: var(--radius-lg);
+  border: 0;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 .pv-card-media {
   border-radius: var(--radius-md);
+  background: #fff;
 }
 
 .card-lift {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.2s ease;
+  transition: box-shadow 0.2s ease, background 0.25s ease, color 0.2s ease,
+    border-color 0.2s ease;
 }
 
-.card-lift:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--card-shadow);
+.pv-card.card-lift:hover {
+  transform: none;
+  background: var(--card-hover-bg);
+  box-shadow: inset 0 0 0 2px var(--brand);
+}
+
+.pv-card.card-lift:hover .text-ink,
+.pv-card.card-lift:hover h3 {
+  color: var(--brand);
 }
 
 .search-bar {
   position: relative;
   z-index: 5;
   padding: 0.75rem;
-  border: 1px solid var(--line);
+  border: 0;
   border-radius: var(--radius-lg);
   background: #fff;
   color: var(--ink);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 0 2px var(--brand);
 }
 
 .search-bar input[type="search"] {
@@ -202,12 +233,13 @@ img {
 }
 
 .map-frame {
-  border-radius: calc(var(--radius-lg) + 4px);
-  box-shadow: 0 12px 40px rgba(229, 50, 45, 0.18);
+  border-radius: 12px;
+  box-shadow: none;
 }
 
 .map-frame-inner {
   border-radius: var(--radius-md);
+  border-width: 0;
 }
 
 .carousel-btn {
@@ -217,16 +249,16 @@ img {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--radius-btn);
-  border: 1px solid var(--line);
-  background: #fff;
+  border: 0;
+  background: var(--surface);
   color: var(--ink);
   cursor: pointer;
   transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
 }
 
 .carousel-btn:hover {
-  border-color: var(--brand);
-  color: var(--brand);
+  background: var(--brand);
+  color: #fff;
 }
 
 @keyframes fade-up {
@@ -258,6 +290,8 @@ img {
 .site-header {
   background: var(--header-bg);
   color: var(--header-fg);
+  border-bottom: 6px solid #9e1f1b;
+  border-radius: 0;
 }
 
 .header-logo-img {
@@ -295,7 +329,8 @@ img {
   border-radius: var(--radius-btn);
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -318,7 +353,7 @@ img {
   border-radius: var(--radius-btn);
   background: #fff;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--brand);
   transition: opacity 0.2s ease;
 }
@@ -359,9 +394,9 @@ img {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* —— Page backgrounds —— */
+/* —— Page backgrounds (full-bleed) —— */
 html[data-bg="white"] body {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   background-image: none;
 }
 
@@ -412,31 +447,38 @@ html[data-pattern="on"][data-bg="black"] body {
 }
 
 .site-shell {
-  width: min(1200px, calc(100% - (var(--page-pad) * 2)));
-  margin-inline: auto;
-  margin-block: var(--page-pad);
+  width: 100%;
+  margin: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - (var(--page-pad) * 2));
-  background: #fff;
-  border-radius: var(--radius-shell);
+  min-height: 100vh;
+  background: transparent;
+  border-radius: 0;
   overflow: visible;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 18px 50px rgba(0, 0, 0, 0.12);
-  transition: width 0.35s ease, box-shadow 0.35s ease, margin 0.35s ease,
-    border-radius 0.35s ease;
+  box-shadow: none;
 }
 
-.site-shell > header {
-  border-radius: var(--radius-shell) var(--radius-shell) 0 0;
-}
-
+.site-shell > header,
 .site-shell > footer {
-  border-radius: 0 0 var(--radius-shell) var(--radius-shell);
+  border-radius: 0;
 }
 
-html[data-bg="white"] .site-shell {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 14px 40px rgba(0, 0, 0, 0.08);
+/* Text on colored full-page backgrounds (outside white cards/sections) */
+html[data-layout="page"][data-bg="red"] .section-title,
+html[data-layout="page"][data-bg="black"] .section-title,
+html[data-layout="page"][data-bg="red"] .page-heading,
+html[data-layout="page"][data-bg="black"] .page-heading {
+  color: #fff;
+}
+
+html[data-layout="page"][data-bg="red"] .page-meta,
+html[data-layout="page"][data-bg="black"] .page-meta {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+footer {
+  border-top: 6px solid var(--brand);
 }
 
 /* —— Theme dock —— */
@@ -513,600 +555,55 @@ html[data-bg="white"] .site-shell {
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.theme-dock-styles {
-  flex-wrap: wrap;
-  max-width: 22rem;
-}
 
-/* =========================================================
-   ATELIÉR — industriální katalog, červený header
-   ========================================================= */
-html[data-style="atelier"] {
-  --ink: #0b0b0b;
-  --muted: #5a5a5a;
-  --line: #d2d2d0;
-  --surface: #ececea;
-  --radius-lg: 0px;
-  --radius-md: 0px;
-  --radius-btn: 0px;
-  --radius-shell: 0px;
-  --header-bg: var(--brand);
-  --header-fg: #ffffff;
-  --card-shadow: none;
-}
-
-html[data-style="atelier"] body {
-  letter-spacing: 0.005em;
-}
-
-html[data-style="atelier"] .site-shell {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
-}
-
-html[data-style="atelier"] .site-header {
-  border-bottom: 3px solid #0b0b0b;
-}
-
-html[data-style="atelier"] .nav-link {
+/* —— Layout: plná stránka (default) vs floating island —— */
+html[data-layout="page"] .site-shell {
+  width: 100%;
+  margin: 0;
+  min-height: 100vh;
+  background: transparent;
   border-radius: 0;
-  padding: 0.45rem 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-size: 0.72rem;
+  box-shadow: none;
 }
 
-html[data-style="atelier"] .nav-link.is-active {
-  background: #fff;
-  color: var(--brand);
-}
-
-html[data-style="atelier"] .nav-link:not(.is-active):hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-html[data-style="atelier"] .header-phone {
-  border-radius: 0;
-  background: #fff;
-  color: var(--brand);
-  border: 0;
-  letter-spacing: 0.04em;
-}
-
-html[data-style="atelier"] .header-phone:hover {
-  background: #fff;
-  opacity: 0.92;
-}
-
-html[data-style="atelier"] .header-menu-btn {
+html[data-layout="page"] .site-shell > header,
+html[data-layout="page"] .site-shell > footer {
   border-radius: 0;
 }
 
-html[data-style="atelier"] .btn {
-  border-radius: 0;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.78rem;
-  font-weight: 700;
+html[data-layout="island"] {
+  --page-pad: clamp(0.5rem, 2.5vw, 1.75rem);
+  --radius-shell: 18px;
 }
 
-html[data-style="atelier"] .btn:hover {
-  transform: none;
-}
-
-html[data-style="atelier"] .btn-primary {
-  box-shadow: 3px 3px 0 #000;
-}
-
-html[data-style="atelier"] .btn-primary:hover {
-  background: var(--brand);
-  box-shadow: 1px 1px 0 #000;
-}
-
-html[data-style="atelier"] .btn-ghost {
-  border-width: 1px;
-  border-radius: 0;
-}
-
-html[data-style="atelier"] .btn-dark {
-  box-shadow: 3px 3px 0 var(--brand);
-}
-
-html[data-style="atelier"] .section-title {
-  position: relative;
-  display: block;
-  width: fit-content;
+html[data-layout="island"] .site-shell {
+  width: min(1200px, calc(100% - (var(--page-pad) * 2)));
   margin-inline: auto;
-  padding-bottom: 0.65rem;
-  letter-spacing: 0.14em;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
-}
-
-html[data-style="atelier"] .section-title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 2.5rem;
-  height: 3px;
-  transform: translateX(-50%);
-  background: var(--brand);
-}
-
-html[data-style="atelier"] .section-title-left {
-  margin-inline: 0;
-}
-
-html[data-style="atelier"] .section-title-left::after {
-  left: 0;
-  transform: none;
-}
-
-html[data-style="atelier"] .pv-card {
-  border-radius: 0;
-  border-color: #cfcfcb;
-  box-shadow: none;
-}
-
-html[data-style="atelier"] .card-lift:hover {
-  transform: none;
-  box-shadow: none;
-  border-color: var(--brand);
-  background: #fafaf8;
-}
-
-html[data-style="atelier"] .pv-card-media {
-  border-radius: 0;
-}
-
-html[data-style="atelier"] .search-bar {
-  border-radius: 0;
-  border: 2px solid var(--ink);
-  box-shadow: 6px 6px 0 rgba(229, 50, 45, 0.85);
-}
-
-html[data-style="atelier"] .search-bar-submit {
-  border-radius: 0 !important;
-}
-
-html[data-style="atelier"] .map-frame {
-  border-radius: 0;
-  box-shadow: 8px 8px 0 #0b0b0b;
-  padding: 0.35rem !important;
-}
-
-html[data-style="atelier"] .map-frame-inner {
-  border-radius: 0;
-  border-width: 0;
-}
-
-html[data-style="atelier"] .carousel-btn {
-  border-radius: 0;
-  border-width: 1.5px;
-  border-color: var(--ink);
-  font-weight: 700;
-}
-
-html[data-style="atelier"] .carousel-btn:hover {
-  background: var(--brand);
-  border-color: var(--brand);
-  color: #fff;
-}
-
-html[data-style="atelier"] .theme-dock {
-  border-radius: 0;
-  border: 2px solid var(--ink);
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
-  backdrop-filter: none;
-}
-
-html[data-style="atelier"] .theme-dock-style {
-  border-radius: 0;
-}
-
-html[data-style="atelier"] .theme-dock-swatch-btn,
-html[data-style="atelier"] .theme-dock-swatch {
-  border-radius: 0;
-}
-
-html[data-style="atelier"] footer {
-  border-top: 3px solid var(--brand);
-}
-
-html[data-style="atelier"] .hero-eyebrow {
-  letter-spacing: 0.28em;
-}
-
-/* Hero tweaks when atelier */
-html[data-style="atelier"] .hero-panel h1 {
-  letter-spacing: -0.03em;
-  max-width: 18ch;
-}
-
-/* =========================================================
-   LINKA — červená svislá linka, kompaktní katalog
-   ========================================================= */
-html[data-style="linka"] {
-  --ink: #121212;
-  --muted: #616161;
-  --line: #e2e2e2;
-  --surface: #f3f3f3;
-  --radius-lg: 4px;
-  --radius-md: 4px;
-  --radius-btn: 4px;
-  --radius-shell: 6px;
-  --header-bg: var(--brand);
-  --header-fg: #ffffff;
-  --card-shadow: none;
-}
-
-html[data-style="linka"] .site-header {
-  border-bottom: 0;
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.18);
-}
-
-html[data-style="linka"] .nav-link {
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-html[data-style="linka"] .nav-link.is-active {
+  margin-block: var(--page-pad);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - (var(--page-pad) * 2));
   background: #fff;
-  color: var(--brand);
+  border-radius: var(--radius-shell);
+  overflow: visible;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 18px 50px rgba(0, 0, 0, 0.12);
+  transition: width 0.35s ease, box-shadow 0.35s ease, margin 0.35s ease,
+    border-radius 0.35s ease;
 }
 
-html[data-style="linka"] .header-phone {
-  border-radius: 4px;
-  background: #fff;
-  color: var(--brand);
+html[data-layout="island"] .site-shell > header {
+  border-radius: var(--radius-shell) var(--radius-shell) 0 0;
 }
 
-html[data-style="linka"] .section-title {
-  text-align: left;
-  margin-inline: 0;
-  padding-left: 0.85rem;
-  border-left: 4px solid var(--brand);
-  letter-spacing: 0.08em;
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
+html[data-layout="island"] .site-shell > footer {
+  border-radius: 0 0 var(--radius-shell) var(--radius-shell);
 }
 
-html[data-style="linka"] .section-title-left {
-  border-left-width: 4px;
+html[data-layout="island"][data-bg="white"] body {
+  background-color: #f0f0f0;
 }
 
-html[data-style="linka"] .pv-card {
-  border-radius: 4px;
-  border-left: 3px solid transparent;
-}
-
-html[data-style="linka"] .card-lift:hover {
-  transform: translateX(3px);
-  box-shadow: none;
-  border-left-color: var(--brand);
-}
-
-html[data-style="linka"] .btn {
-  border-radius: 4px;
-}
-
-html[data-style="linka"] .btn:hover {
-  transform: none;
-}
-
-html[data-style="linka"] .search-bar {
-  border-radius: 4px;
-  border: 1px solid var(--ink);
-  box-shadow: none;
-}
-
-html[data-style="linka"] .search-bar-submit {
-  border-radius: 3px !important;
-}
-
-html[data-style="linka"] .map-frame {
-  border-radius: 4px;
-  box-shadow: none;
-  outline: 1px solid rgba(0, 0, 0, 0.12);
-  outline-offset: 4px;
-}
-
-html[data-style="linka"] .map-frame-inner {
-  border-radius: 2px;
-}
-
-html[data-style="linka"] .carousel-btn {
-  border-radius: 4px;
-}
-
-html[data-style="linka"] .theme-dock {
-  border-radius: 6px;
-}
-
-html[data-style="linka"] footer {
-  border-top: 4px solid var(--brand);
-}
-
-/* =========================================================
-   PANEL — velké plochy, silný brand pruh, mírné rohy
-   ========================================================= */
-html[data-style="panel"] {
-  --ink: #101010;
-  --muted: #5c5c5c;
-  --line: #dddddd;
-  --surface: #efefef;
-  --radius-lg: 10px;
-  --radius-md: 8px;
-  --radius-btn: 8px;
-  --radius-shell: 12px;
-  --header-bg: var(--brand);
-  --header-fg: #ffffff;
-  --card-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
-}
-
-html[data-style="panel"] .site-header {
-  border-bottom: 6px solid #9e1f1b;
-}
-
-html[data-style="panel"] .nav-link {
-  border-radius: 8px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-html[data-style="panel"] .nav-link.is-active {
-  background: #fff;
-  color: var(--brand);
-}
-
-html[data-style="panel"] .header-phone {
-  border-radius: 8px;
-  background: #fff;
-  color: var(--brand);
-  font-weight: 700;
-}
-
-html[data-style="panel"] .section-title {
-  letter-spacing: 0.12em;
-  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
-}
-
-html[data-style="panel"] .section-title::before {
-  content: "";
-  display: block;
-  width: 3rem;
-  height: 6px;
-  margin: 0 auto 0.75rem;
-  background: var(--brand);
-}
-
-html[data-style="panel"] .section-title-left::before {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-html[data-style="panel"] .pv-card {
-  border: 0;
-  background: var(--surface);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
-}
-
-html[data-style="panel"] .card-lift:hover {
-  transform: none;
-  background: #fff;
-  box-shadow: inset 0 0 0 2px var(--brand);
-}
-
-html[data-style="panel"] .btn {
-  border-radius: 8px;
-  min-height: 3rem;
-  font-weight: 700;
-}
-
-html[data-style="panel"] .btn-primary {
-  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.18);
-}
-
-html[data-style="panel"] .btn:hover {
-  transform: none;
-}
-
-html[data-style="panel"] .search-bar {
-  border: 0;
-  border-radius: 10px;
-  box-shadow: 0 0 0 2px var(--brand);
-}
-
-html[data-style="panel"] .map-frame {
-  border-radius: 12px;
-  box-shadow: none;
-  padding: 0.65rem !important;
-}
-
-html[data-style="panel"] .map-frame-inner {
-  border-radius: 8px;
-  border-width: 0;
-}
-
-html[data-style="panel"] .carousel-btn {
-  border-radius: 8px;
-  border: 0;
-  background: var(--surface);
-}
-
-html[data-style="panel"] .carousel-btn:hover {
-  background: var(--brand);
-  color: #fff;
-}
-
-html[data-style="panel"] .theme-dock {
-  border-radius: 12px;
-  border: 0;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08), 0 12px 28px rgba(0, 0, 0, 0.12);
-}
-
-html[data-style="panel"] footer {
-  border-top: 6px solid var(--brand);
-}
-
-/* =========================================================
-   RÁM — dvojité rámečky, technický výkres
-   ========================================================= */
-html[data-style="ram"] {
-  --ink: #0d0d0d;
-  --muted: #555;
-  --line: #bdbdbd;
-  --surface: #f6f6f6;
-  --radius-lg: 2px;
-  --radius-md: 2px;
-  --radius-btn: 2px;
-  --radius-shell: 2px;
-  --header-bg: var(--brand);
-  --header-fg: #ffffff;
-  --card-shadow: none;
-}
-
-html[data-style="ram"] .site-shell {
-  outline: 1px solid rgba(0, 0, 0, 0.2);
-  outline-offset: 5px;
-  box-shadow: none;
-}
-
-html[data-style="ram"] .site-header {
-  border-bottom: 1px solid #fff;
-  outline: 1px solid rgba(0, 0, 0, 0.25);
-  outline-offset: -5px;
-}
-
-html[data-style="ram"] .nav-link {
-  border-radius: 2px;
-  border: 1px solid transparent;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-html[data-style="ram"] .nav-link.is-active {
-  background: transparent;
-  border-color: #fff;
-  color: #fff;
-}
-
-html[data-style="ram"] .nav-link:not(.is-active):hover {
-  border-color: rgba(255, 255, 255, 0.45);
-  background: transparent;
-}
-
-html[data-style="ram"] .header-phone {
-  border-radius: 2px;
-  background: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-html[data-style="ram"] .header-phone:hover {
-  background: #fff;
-  color: var(--brand);
-  opacity: 1;
-}
-
-html[data-style="ram"] .section-title {
-  letter-spacing: 0.18em;
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
-  padding: 0.55rem 0.9rem;
-  border: 1px solid var(--ink);
-  width: fit-content;
-  margin-inline: auto;
-}
-
-html[data-style="ram"] .section-title-left {
-  margin-inline: 0;
-}
-
-html[data-style="ram"] .pv-card {
-  border-radius: 2px;
-  border: 1px solid var(--ink);
-  outline: 1px solid var(--line);
-  outline-offset: 3px;
-  background: #fff;
-}
-
-html[data-style="ram"] .card-lift:hover {
-  transform: none;
-  outline-color: var(--brand);
-  border-color: var(--brand);
-}
-
-html[data-style="ram"] .btn {
-  border-radius: 2px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-html[data-style="ram"] .btn:hover {
-  transform: none;
-}
-
-html[data-style="ram"] .btn-primary {
-  outline: 1px solid var(--ink);
-  outline-offset: 3px;
-}
-
-html[data-style="ram"] .search-bar {
-  border-radius: 2px;
-  border: 1px solid var(--ink);
-  outline: 1px dashed var(--brand);
-  outline-offset: 4px;
-  box-shadow: none;
-}
-
-html[data-style="ram"] .search-bar-submit {
-  border-radius: 2px !important;
-}
-
-html[data-style="ram"] .map-frame {
-  border-radius: 2px;
-  box-shadow: none;
-  outline: 1px solid var(--ink);
-  outline-offset: 6px;
-  padding: 0.4rem !important;
-}
-
-html[data-style="ram"] .map-frame-inner {
-  border-radius: 0;
-  border: 1px solid var(--ink);
-}
-
-html[data-style="ram"] .carousel-btn {
-  border-radius: 2px;
-  border: 1px solid var(--ink);
-}
-
-html[data-style="ram"] .carousel-btn:hover {
-  background: var(--ink);
-  color: #fff;
-  border-color: var(--ink);
-}
-
-html[data-style="ram"] .theme-dock {
-  border-radius: 2px;
-  border: 1px solid var(--ink);
-  outline: 1px solid var(--line);
-  outline-offset: 3px;
-  box-shadow: none;
-}
-
-html[data-style="ram"] .theme-dock-style,
-html[data-style="ram"] .theme-dock-swatch-btn,
-html[data-style="ram"] .theme-dock-swatch {
-  border-radius: 2px;
-}
-
-html[data-style="ram"] footer {
-  border-top: 1px solid var(--brand);
-  outline: 1px solid rgba(255, 255, 255, 0.12);
-  outline-offset: -6px;
+html[data-layout="island"][data-bg="white"] .site-shell {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 14px 40px rgba(0, 0, 0, 0.08);
 }

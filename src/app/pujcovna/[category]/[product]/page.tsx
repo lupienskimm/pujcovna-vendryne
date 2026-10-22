@@ -60,12 +60,12 @@ export default async function ProductPage({ params }: Props) {
           </div>
 
           <div>
-            <p className="text-sm font-medium text-muted">{category.name}</p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-ink md:text-4xl">
+            <p className="page-meta text-sm font-medium text-muted">{category.name}</p>
+            <h1 className="page-heading mt-2 text-3xl font-bold tracking-tight text-ink md:text-4xl">
               {product.name}
             </h1>
             {product.description ? (
-              <p className="mt-4 text-base leading-relaxed text-muted">
+              <p className="page-meta mt-4 text-base leading-relaxed text-muted">
                 {product.description}
               </p>
             ) : null}
