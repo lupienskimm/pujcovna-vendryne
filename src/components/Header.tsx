@@ -58,7 +58,7 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-1 md:flex" aria-label="Hlavní menu">
+          <nav className="nav-desktop" aria-label="Hlavní menu">
             {nav.map((item) => {
               const active =
                 item.href === "/"
@@ -88,7 +88,7 @@ export function Header() {
 
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line md:hidden"
+            className="nav-mobile-btn h-10 w-10 items-center justify-center rounded-full border border-line"
             aria-label="Menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}

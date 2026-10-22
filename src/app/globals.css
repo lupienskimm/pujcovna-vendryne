@@ -9,22 +9,10 @@
   --surface: #f4f4f4;
   --background: #ffffff;
   --foreground: #141414;
-  --radius: 14px;
-  --radius-sm: 10px;
-  --radius-lg: 20px;
 }
 
-@theme inline {
-  --color-brand: var(--brand);
-  --color-brand-dark: var(--brand-dark);
-  --color-ink: var(--ink);
-  --color-muted: var(--muted);
-  --color-line: var(--line);
-  --color-surface: var(--surface);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --radius-brand: var(--radius);
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -54,6 +42,40 @@ img {
 
 ::selection {
   background: color-mix(in srgb, var(--brand) 25%, white);
+}
+
+.bg-brand {
+  background-color: var(--brand);
+}
+.bg-brand-dark {
+  background-color: var(--brand-dark);
+}
+.bg-ink {
+  background-color: var(--ink);
+}
+.bg-surface {
+  background-color: var(--surface);
+}
+.text-brand {
+  color: var(--brand);
+}
+.text-ink {
+  color: var(--ink);
+}
+.text-muted {
+  color: var(--muted);
+}
+.border-line {
+  border-color: var(--line);
+}
+.hover\:text-brand:hover {
+  color: var(--brand);
+}
+.hover\:bg-surface:hover {
+  background-color: var(--surface);
+}
+.group:hover .group-hover\:text-brand {
+  color: var(--brand);
 }
 
 .container-pv {
@@ -141,4 +163,23 @@ img {
 }
 .delay-3 {
   animation-delay: 0.24s;
+}
+
+.nav-desktop {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-mobile-btn {
+  display: inline-flex;
+}
+
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+  }
+  .nav-mobile-btn {
+    display: none;
+  }
 }

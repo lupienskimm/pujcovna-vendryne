@@ -15,10 +15,16 @@ export function Hero() {
           alt=""
           fill
           priority
-          className="object-cover object-center opacity-55"
+          className="object-cover object-[center_40%] opacity-50"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/35" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.35) 100%)",
+          }}
+        />
       </div>
 
       <div className="container-pv relative pb-24 pt-14 md:pb-28 md:pt-20">
