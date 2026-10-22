@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "pujcovna-vendryne",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "cheerio": "^1.2.0",
+    "fast-xml-parser": "^5.11.2",
     "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0"

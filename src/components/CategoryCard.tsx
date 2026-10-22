@@ -1,0 +1,29 @@
+import Image from "next/image";
+import Link from "next/link";
+import type { Category } from "@/data/site";
+
+export function CategoryCard({ category }: { category: Category }) {
+  return (
+    <Link
+      href={`/pujcovna/${category.slug}`}
+      className="card-lift group flex items-center justify-between gap-4 rounded-[18px] border border-line bg-white p-4"
+    >
+      <div className="min-w-0">
+        <h3 className="truncate text-[15px] font-semibold text-ink group-hover:text-brand">
+          {category.name}
+        </h3>
+      </div>
+      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl bg-surface">
+        {category.image ? (
+          <Image
+            src={category.image}
+            alt={category.name}
+            fill
+            className="object-contain p-1"
+            sizes="80px"
+          />
+        ) : null}
+      </div>
+    </Link>
+  );
+}
