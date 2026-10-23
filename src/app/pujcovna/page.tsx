@@ -3,7 +3,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CatalogFilters } from "@/components/CatalogFilters";
 import { ProductCard } from "@/components/ProductCard";
 import { SearchBar } from "@/components/SearchBar";
-import { categories, searchProducts } from "@/data/site";
+import { categories } from "@/data/site";
+import { searchProducts } from "@/lib/search";
 
 type Props = {
   searchParams: Promise<{ q?: string; kategorie?: string }>;

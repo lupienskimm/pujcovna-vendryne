@@ -19,7 +19,7 @@ function syncStack(pathname: string): string | undefined {
 
   const last = stack[stack.length - 1];
   if (last === pathname) {
-    // same page
+    // same
   } else if (stack[stack.length - 2] === pathname) {
     stack.pop();
   } else {
@@ -28,52 +28,6 @@ function syncStack(pathname: string): string | undefined {
 
   sessionStorage.setItem(HIST_KEY, JSON.stringify(stack.slice(-40)));
   return stack[stack.length - 2];
-}
-
-function Actions({
-  showHome,
-  onBack,
-  invisible,
-}: {
-  showHome: boolean;
-  onBack: () => void;
-  invisible?: boolean;
-}) {
-  return (
-    <div
-      className={`page-nav-actions${invisible ? " is-spacer" : ""}`}
-      aria-hidden={invisible || undefined}
-    >
-      {showHome ? (
-        <>
-          <Link
-            href="/"
-            className="page-nav-btn"
-            tabIndex={invisible ? -1 : undefined}
-          >
-            Domů
-          </Link>
-          <button
-            type="button"
-            className="page-nav-btn"
-            onClick={onBack}
-            tabIndex={invisible ? -1 : undefined}
-          >
-            Zpět
-          </button>
-        </>
-      ) : (
-        <button
-          type="button"
-          className="page-nav-btn"
-          onClick={onBack}
-          tabIndex={invisible ? -1 : undefined}
-        >
-          Zpět
-        </button>
-      )}
-    </div>
-  );
 }
 
 export function Breadcrumbs({ items }: { items: Crumb[] }) {
@@ -94,11 +48,23 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
     router.push("/");
   };
 
+  const mobileItems =
+    items.length > 2 ? [items[items.length - 2], items[items.length - 1]] : items;
+
   return (
     <nav className="page-nav" aria-label="Navigace stránky">
-      <Actions showHome={showHome} onBack={goBack} />
+      <div className="page-nav-actions">
+        {showHome ? (
+          <Link href="/" className="page-nav-btn">
+            Domů
+          </Link>
+        ) : null}
+        <button type="button" className="page-nav-btn" onClick={goBack}>
+          Zpět
+        </button>
+      </div>
 
-      <ol className="page-nav-crumbs">
+      <ol className="page-nav-crumbs page-nav-crumbs--desktop">
         {items.map((item, i) => {
           const last = i === items.length - 1;
           return (
@@ -111,14 +77,41 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
               {item.href && !last ? (
                 <Link href={item.href}>{item.label}</Link>
               ) : (
-                <span className={last ? "is-current" : undefined}>{item.label}</span>
+                <span className={last ? "is-current" : undefined}>
+                  {item.label}
+                </span>
               )}
             </li>
           );
         })}
       </ol>
 
-      <Actions showHome={showHome} onBack={goBack} invisible />
+      <ol className="page-nav-crumbs page-nav-crumbs--mobile" aria-label="Umístění">
+        {mobileItems.map((item, i) => {
+          const last = i === mobileItems.length - 1;
+          const absIndex = items.length - mobileItems.length + i;
+          return (
+            <li key={`m-${item.label}-${i}`} className="page-nav-crumb">
+              {i > 0 ? (
+                <span className="page-nav-sep" aria-hidden>
+                  /
+                </span>
+              ) : absIndex > 0 ? (
+                <span className="page-nav-sep" aria-hidden>
+                  …
+                </span>
+              ) : null}
+              {item.href && !last ? (
+                <Link href={item.href}>{item.label}</Link>
+              ) : (
+                <span className={last ? "is-current" : undefined}>
+                  {item.label}
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ol>
     </nav>
   );
 }

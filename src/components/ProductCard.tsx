@@ -33,7 +33,7 @@ export function ProductCard({
             alt={product.name}
             fill
             loading="lazy"
-            className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.03]"
+            className="object-contain p-4"
             sizes="(max-width:768px) 100vw, 33vw"
           />
         ) : null}
@@ -63,7 +63,10 @@ export function ProductCard({
         {price ? (
           <p className="pt-1 text-sm font-semibold text-brand">{price}</p>
         ) : null}
-        <div className="card-cta mt-2 flex flex-wrap gap-2">
+        <div className="card-cta mt-2 grid grid-cols-2 gap-2">
+          <Link href={rentHref} className="card-cta-btn is-primary col-span-2">
+            Půjčit
+          </Link>
           <a
             href={`tel:${site.phone.replace(/\s/g, "")}`}
             className="card-cta-btn"
@@ -71,16 +74,13 @@ export function ProductCard({
           >
             Zavolat
           </a>
-          <Link href={rentHref} className="card-cta-btn is-primary">
-            Půjčit
-          </Link>
           <a
             href={`mailto:${site.email}?subject=${encodeURIComponent(
               `Dostupnost: ${product.name}`
             )}`}
             className="card-cta-btn"
           >
-            Dostupnost
+            E-mail
           </a>
         </div>
       </div>

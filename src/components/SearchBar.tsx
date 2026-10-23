@@ -11,7 +11,7 @@ export function SearchBar({ className = "" }: { className?: string }) {
         <input
           type="search"
           name="q"
-          placeholder="Hledat …"
+          placeholder="např. bagr, rypadlo, plošina…"
           className="w-full border-0 bg-transparent text-[15px] text-ink outline-none placeholder:text-muted/70"
         />
       </label>

@@ -43,14 +43,3 @@ export function allProducts(): (Product & { categoryName: string })[] {
     c.products.map((p) => ({ ...p, categoryName: c.name }))
   );
 }
-
-export function searchProducts(query: string) {
-  const q = query.trim().toLowerCase();
-  if (!q) return [];
-  return allProducts().filter(
-    (p) =>
-      p.name.toLowerCase().includes(q) ||
-      p.categoryName.toLowerCase().includes(q) ||
-      p.slug.includes(q)
-  );
-}

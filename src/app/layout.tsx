@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
-import { DeferredCardStyleDock } from "@/components/DeferredCardStyleDock";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/data/site";
@@ -46,8 +45,6 @@ export const metadata: Metadata = {
   },
 };
 
-const cardStyleInit = `(function(){try{var s=localStorage.getItem('pv-card-style');document.documentElement.dataset.cards=(s==='lift'||s==='flat')?s:'flat';}catch(e){document.documentElement.dataset.cards='flat';}})();`;
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,7 +54,6 @@ export default function RootLayout({
     <html
       lang="cs"
       className={`${inter.variable} h-full antialiased`}
-      data-cards="flat"
       suppressHydrationWarning
     >
       <head>
@@ -68,15 +64,13 @@ export default function RootLayout({
           type="image/webp"
           fetchPriority="high"
         />
-        <script dangerouslySetInnerHTML={{ __html: cardStyleInit }} />
       </head>
       <body className="flex min-h-full flex-col font-sans">
         <div className="site-shell">
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 min-w-0">{children}</main>
           <Footer />
         </div>
-        <DeferredCardStyleDock />
         <Analytics />
       </body>
     </html>
