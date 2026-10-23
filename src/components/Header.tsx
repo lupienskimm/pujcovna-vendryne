@@ -14,6 +14,7 @@ export function Header() {
       <div className="container-pv flex h-14 items-center justify-between gap-4 md:h-[3.75rem]">
         <Link
           href="/"
+          prefetch={false}
           className="header-logo flex shrink-0 items-center"
           aria-label={site.name}
         >
@@ -21,16 +22,22 @@ export function Header() {
           <img
             src="/logos/logo-wordmark.svg"
             alt={site.name}
-            width={248}
-            height={88}
+            width={200}
+            height={71}
             decoding="async"
+            fetchPriority="low"
             className="header-logo-img"
           />
         </Link>
 
         <nav className="nav-desktop" aria-label="Hlavní menu">
           {nav.map((item) => (
-            <Link key={item.href} href={item.href} className="nav-link">
+            <Link
+              key={item.href}
+              href={item.href}
+              prefetch={false}
+              className="nav-link"
+            >
               {item.label}
             </Link>
           ))}

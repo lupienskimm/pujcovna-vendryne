@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/data/site";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin-ext"],
-  display: "swap",
-  adjustFontFallback: true,
-  preload: false,
-});
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://pujcovna.azervera.cz";
@@ -51,20 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="cs"
-      className={`${inter.variable} h-full antialiased`}
-      suppressHydrationWarning
-    >
-      <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/hero/excavator-900.webp"
-          type="image/webp"
-          fetchPriority="high"
-        />
-      </head>
+    <html lang="cs" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex min-h-full flex-col font-sans">
         <div className="site-shell">
           <Header />

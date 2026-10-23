@@ -2,7 +2,7 @@
 
 import { useMemo, useState, useTransition } from "react";
 import { CategoryCard } from "@/components/CategoryCard";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductCard, toProductCardData } from "@/components/ProductCard";
 import { ProductSkeletonGrid } from "@/components/ProductSkeleton";
 import type { Category, Product } from "@/data/site";
 
@@ -128,7 +128,7 @@ export function CatalogFilters({
             products.map(({ product, categoryName }) => (
               <ProductCard
                 key={`${product.categorySlug}-${product.slug}`}
-                product={product}
+                product={toProductCardData(product)}
                 categoryName={categoryName}
               />
             ))

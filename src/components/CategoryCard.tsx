@@ -1,8 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Category } from "@/data/site";
 
-export function CategoryCard({ category }: { category: Category }) {
+export type CategoryCardData = {
+  name: string;
+  slug: string;
+  image: string | null;
+};
+
+export function CategoryCard({ category }: { category: CategoryCardData }) {
   return (
     <Link
       href={`/pujcovna/${category.slug}`}
@@ -13,14 +18,16 @@ export function CategoryCard({ category }: { category: Category }) {
           {category.name}
         </h3>
       </div>
-      <div className="pv-card-media relative h-16 w-20 shrink-0 overflow-hidden bg-white">
+      <div className="pv-card-media relative flex h-16 w-20 shrink-0 items-center justify-center overflow-hidden bg-white">
         {category.image ? (
           <Image
             src={category.image}
             alt=""
-            fill
+            width={80}
+            height={64}
             loading="lazy"
-            className="object-contain p-1"
+            quality={55}
+            className="max-h-full max-w-full object-contain p-1"
             sizes="80px"
           />
         ) : null}

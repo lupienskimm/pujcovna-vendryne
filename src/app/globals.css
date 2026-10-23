@@ -20,7 +20,9 @@
 }
 
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
 }
 
 * {
@@ -49,10 +51,15 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-attachment: fixed;
-  transition: background-color 0.35s ease;
   overflow-x: clip;
   max-width: 100vw;
 }
@@ -278,14 +285,32 @@ img {
   }
 }
 
-.hero-photo {
+.hero-panel {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+.hero-media {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 45%;
-  opacity: 0.5;
+  background:
+    radial-gradient(
+      ellipse 90% 70% at 70% 35%,
+      rgba(120, 120, 120, 0.28),
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 20% 80%,
+      rgba(80, 80, 80, 0.22),
+      transparent 55%
+    ),
+    linear-gradient(155deg, #1c1c1c 0%, #0e0e0e 45%, #171717 100%);
 }
 
 .hero-scrim {
@@ -293,10 +318,19 @@ img {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.82) 0%,
-    rgba(0, 0, 0, 0.55) 55%,
-    rgba(0, 0, 0, 0.35) 100%
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.4) 55%,
+    rgba(0, 0, 0, 0.22) 100%
   );
+}
+
+@media (max-width: 767px) {
+  .hero-intro {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
 }
 
 .animate-fade-up {

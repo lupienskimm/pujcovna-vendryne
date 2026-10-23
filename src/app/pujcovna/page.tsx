@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CatalogFilters } from "@/components/CatalogFilters";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductCard, toProductCardData } from "@/components/ProductCard";
 import { SearchBar } from "@/components/SearchBar";
 import { categories } from "@/data/site";
 import { searchProducts } from "@/lib/search";
@@ -48,7 +48,7 @@ export default async function PujcovnaPage({ searchParams }: Props) {
                 results.map((product) => (
                   <ProductCard
                     key={`${product.categorySlug}-${product.slug}`}
-                    product={product}
+                    product={toProductCardData(product)}
                     categoryName={product.categoryName}
                   />
                 ))

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductCard, toProductCardData } from "@/components/ProductCard";
 import { categories, getCategory, site } from "@/data/site";
 
 type Props = {
@@ -51,7 +51,10 @@ export default async function CategoryPage({ params }: Props) {
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {category.products.map((product) => (
-            <ProductCard key={product.slug} product={product} />
+            <ProductCard
+              key={product.slug}
+              product={toProductCardData(product)}
+            />
           ))}
         </div>
       </div>

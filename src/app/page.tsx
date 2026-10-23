@@ -1,62 +1,16 @@
-import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
-import { CategoryCard } from "@/components/CategoryCard";
 import { Hero } from "@/components/Hero";
-import { MapBlock } from "@/components/MapBlock";
-import { ProductCard } from "@/components/ProductCard";
-import { categories, site } from "@/data/site";
-
-const Reviews = dynamic(() =>
-  import("@/components/Reviews").then((m) => m.Reviews)
-);
+import { HomeCatalog } from "@/components/HomeCatalog";
+import { HomeMap } from "@/components/HomeMap";
+import { HomeReviews } from "@/components/HomeReviews";
+import { site } from "@/data/site";
 
 export default function HomePage() {
-  const featured = categories
-    .flatMap((c) =>
-      c.products.slice(0, 1).map((p) => ({ product: p, categoryName: c.name }))
-    )
-    .slice(0, 8);
-
   return (
     <>
       <Hero />
 
-      <section className="pt-14 pb-10 md:pt-16 md:pb-12">
-        <div className="container-pv">
-          <h2 className="section-title">Kategorie</h2>
-          <p className="page-meta mx-auto mt-3 max-w-2xl text-center text-sm">
-            Vyberte typ techniky a prohlédněte kompletní sortiment.
-          </p>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {categories.map((category) => (
-              <CategoryCard key={category.slug} category={category} />
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link href="/pujcovna" className="btn btn-primary">
-              Celý sortiment
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {featured.length > 0 ? (
-        <section className="pb-16 pt-6 md:pb-20 md:pt-8">
-          <div className="container-pv">
-            <h2 className="section-title">Výběr strojů</h2>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {featured.map(({ product, categoryName }) => (
-                <ProductCard
-                  key={`${product.categorySlug}-${product.slug}`}
-                  product={product}
-                  categoryName={categoryName}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      ) : null}
+      <HomeCatalog />
 
       <section className="surface-band py-16 md:py-20">
         <div className="container-pv grid items-center gap-10 md:grid-cols-2">
@@ -81,23 +35,26 @@ export default function HomePage() {
               {site.phoneAlt}
             </a>
           </div>
-          <div className="overflow-hidden rounded-[var(--radius-lg)] bg-white">
-            <Image
-              src={site.heroImage}
-              alt={site.heroTitle}
-              width={1200}
-              height={630}
-              loading="lazy"
-              className="h-auto w-full object-contain"
-              sizes="(max-width:768px) 100vw, 50vw"
-            />
+          <div className="overflow-hidden rounded-[var(--radius-lg)] bg-surface px-6 py-10 text-center md:px-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-muted">
+              Servis a půjčovna
+            </p>
+            <p className="mt-3 text-2xl font-bold tracking-tight text-ink">
+              {site.name}
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              {site.address}
+            </p>
+            <Link href="/kontakt" className="btn btn-dark mt-6">
+              Kontakt
+            </Link>
           </div>
         </div>
       </section>
 
-      <Reviews />
+      <HomeReviews />
 
-      <MapBlock />
+      <HomeMap />
     </>
   );
 }

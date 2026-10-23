@@ -11,16 +11,16 @@ export function Analytics() {
           defer
           data-domain={plausibleDomain}
           src="https://plausible.io/js/script.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       ) : null}
       {gaId ? (
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-            strategy="afterInteractive"
+            strategy="lazyOnload"
           />
-          <Script id="ga-init" strategy="afterInteractive">
+          <Script id="ga-init" strategy="lazyOnload">
             {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}');
 document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href^="tel:"],a[data-track^="tel"]');if(!a)return;gtag('event','click',{event_category:'telephone',event_label:a.getAttribute('data-track')||a.getAttribute('href')});});`}
           </Script>
