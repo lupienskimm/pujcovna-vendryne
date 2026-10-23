@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LazyMap } from "@/components/LazyMap";
 import { RentalForm } from "@/components/RentalForm";
 import { site } from "@/data/site";
@@ -12,7 +13,13 @@ export default function KontaktPage() {
   return (
     <div className="pb-16 pt-10 md:pb-20 md:pt-12">
       <div className="container-pv">
-        <h1 className="page-heading text-3xl font-bold tracking-tight md:text-4xl">
+        <Breadcrumbs
+          items={[
+            { href: "/", label: "Úvod" },
+            { label: "Kontakt" },
+          ]}
+        />
+        <h1 className="page-heading mt-4 text-3xl font-bold tracking-tight md:text-4xl">
           Kontakt
         </h1>
 

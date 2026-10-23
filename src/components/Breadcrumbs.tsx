@@ -1,27 +1,124 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export type Crumb = { href?: string; label: string };
 
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
+const HIST_KEY = "pv-nav-stack";
+
+function syncStack(pathname: string): string | undefined {
+  let stack: string[] = [];
+  try {
+    stack = JSON.parse(sessionStorage.getItem(HIST_KEY) || "[]");
+    if (!Array.isArray(stack)) stack = [];
+  } catch {
+    stack = [];
+  }
+
+  const last = stack[stack.length - 1];
+  if (last === pathname) {
+    // same page
+  } else if (stack[stack.length - 2] === pathname) {
+    stack.pop();
+  } else {
+    stack.push(pathname);
+  }
+
+  sessionStorage.setItem(HIST_KEY, JSON.stringify(stack.slice(-40)));
+  return stack[stack.length - 2];
+}
+
+function Actions({
+  showHome,
+  onBack,
+  invisible,
+}: {
+  showHome: boolean;
+  onBack: () => void;
+  invisible?: boolean;
+}) {
   return (
-    <nav className="breadcrumbs text-sm text-muted" aria-label="Drobečková navigace">
-      <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
+    <div
+      className={`page-nav-actions${invisible ? " is-spacer" : ""}`}
+      aria-hidden={invisible || undefined}
+    >
+      {showHome ? (
+        <>
+          <Link
+            href="/"
+            className="page-nav-btn"
+            tabIndex={invisible ? -1 : undefined}
+          >
+            Domů
+          </Link>
+          <button
+            type="button"
+            className="page-nav-btn"
+            onClick={onBack}
+            tabIndex={invisible ? -1 : undefined}
+          >
+            Zpět
+          </button>
+        </>
+      ) : (
+        <button
+          type="button"
+          className="page-nav-btn"
+          onClick={onBack}
+          tabIndex={invisible ? -1 : undefined}
+        >
+          Zpět
+        </button>
+      )}
+    </div>
+  );
+}
+
+export function Breadcrumbs({ items }: { items: Crumb[] }) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const [showHome, setShowHome] = useState(true);
+
+  useEffect(() => {
+    const prev = syncStack(pathname);
+    setShowHome(Boolean(prev && prev !== "/"));
+  }, [pathname]);
+
+  const goBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+      return;
+    }
+    router.push("/");
+  };
+
+  return (
+    <nav className="page-nav" aria-label="Navigace stránky">
+      <Actions showHome={showHome} onBack={goBack} />
+
+      <ol className="page-nav-crumbs">
         {items.map((item, i) => {
           const last = i === items.length - 1;
           return (
-            <li key={`${item.label}-${i}`} className="flex items-center gap-2">
-              {i > 0 ? <span aria-hidden>/</span> : null}
+            <li key={`${item.label}-${i}`} className="page-nav-crumb">
+              {i > 0 ? (
+                <span className="page-nav-sep" aria-hidden>
+                  /
+                </span>
+              ) : null}
               {item.href && !last ? (
-                <Link href={item.href} className="hover:text-brand">
-                  {item.label}
-                </Link>
+                <Link href={item.href}>{item.label}</Link>
               ) : (
-                <span className={last ? "text-ink" : undefined}>{item.label}</span>
+                <span className={last ? "is-current" : undefined}>{item.label}</span>
               )}
             </li>
           );
         })}
       </ol>
+
+      <Actions showHome={showHome} onBack={goBack} invisible />
     </nav>
   );
 }
