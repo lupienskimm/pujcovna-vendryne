@@ -45,10 +45,6 @@ export default function HomePage() {
         <section className="pb-16 pt-6 md:pb-20 md:pt-8">
           <div className="container-pv">
             <h2 className="section-title">Výběr strojů</h2>
-            <p className="page-meta mx-auto mt-3 max-w-2xl text-center text-sm">
-              Ukázka strojů z jednotlivých kategorií — ceny a specifikace najdete
-              u detailu.
-            </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {featured.map(({ product, categoryName }) => (
                 <ProductCard
