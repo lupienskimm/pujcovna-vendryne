@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Footer } from "@/components/Footer";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
-const themeInitScript = `(function(){try{var patterns={none:1,poly:1,grid:1,dots:1,lines:1,chevrons:1};var b=localStorage.getItem('pv-page-bg');var l=localStorage.getItem('pv-page-layout');var p=localStorage.getItem('pv-page-pattern');var o=localStorage.getItem('pv-pattern-opacity');if(p==='on')p='poly';if(p==='off')p='none';document.documentElement.dataset.bg=(b==='white'||b==='red'||b==='black')?b:'white';document.documentElement.dataset.layout=(l==='page'||l==='island')?l:'page';document.documentElement.dataset.pattern=patterns[p]?p:'poly';var op=parseInt(o||'55',10);if(isNaN(op))op=55;if(op<0)op=0;if(op>100)op=100;document.documentElement.style.setProperty('--pattern-opacity',String(op/100));}catch(e){document.documentElement.dataset.bg='white';document.documentElement.dataset.layout='page';document.documentElement.dataset.pattern='poly';document.documentElement.style.setProperty('--pattern-opacity','0.55');}})();`;
+const themeInitScript = `(function(){try{var colors={ink:'#141414',brand:'#E5322D',white:'#ffffff',gray:'#8a8a8a'};var b=localStorage.getItem('pv-page-bg');var p=localStorage.getItem('pv-page-pattern');var c=localStorage.getItem('pv-pattern-color');document.documentElement.dataset.bg=(b==='white'||b==='red'||b==='black')?b:'white';document.documentElement.dataset.layout='page';document.documentElement.dataset.pattern=(p==='grid'||p==='dots')?p:'dots';var col=colors[c]||(/^#[0-9a-fA-F]{6}$/.test(c||'')?c:colors.ink);document.documentElement.style.setProperty('--pattern-opacity','0.7');document.documentElement.style.setProperty('--pattern-color',col);}catch(e){document.documentElement.dataset.bg='white';document.documentElement.dataset.layout='page';document.documentElement.dataset.pattern='dots';document.documentElement.style.setProperty('--pattern-opacity','0.7');document.documentElement.style.setProperty('--pattern-color','#141414');}})();`;
 
 export default function RootLayout({
   children,
@@ -36,8 +37,13 @@ export default function RootLayout({
       className={`${inter.variable} h-full antialiased`}
       data-bg="white"
       data-layout="page"
-      data-pattern="poly"
-      style={{ ["--pattern-opacity" as string]: "0.55" }}
+      data-pattern="dots"
+      style={
+        {
+          ["--pattern-opacity"]: "0.7",
+          ["--pattern-color"]: "#141414",
+        } as CSSProperties
+      }
       suppressHydrationWarning
     >
       <head>
