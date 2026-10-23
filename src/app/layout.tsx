@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
 };
 
-const cardStyleInit = `(function(){try{var s=localStorage.getItem('pv-card-style');document.documentElement.dataset.cards=(s==='lift'||s==='flat')?s:'lift';}catch(e){document.documentElement.dataset.cards='lift';}})();`;
+const cardStyleInit = `(function(){try{var s=localStorage.getItem('pv-card-style');document.documentElement.dataset.cards=(s==='lift'||s==='flat')?s:'flat';}catch(e){document.documentElement.dataset.cards='flat';}})();`;
 
 export default function RootLayout({
   children,

@@ -12,12 +12,12 @@ const OPTIONS: { id: CardStyle; label: string }[] = [
 const KEY = "pv-card-style";
 
 export function CardStyleDock() {
-  const [style, setStyle] = useState<CardStyle>("lift");
+  const [style, setStyle] = useState<CardStyle>("flat");
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const saved = window.localStorage.getItem(KEY) as CardStyle | null;
-    const next = saved === "lift" || saved === "flat" ? saved : "lift";
+    const next = saved === "lift" || saved === "flat" ? saved : "flat";
     setStyle(next);
     document.documentElement.dataset.cards = next;
     setReady(true);

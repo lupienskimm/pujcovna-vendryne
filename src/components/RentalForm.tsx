@@ -23,11 +23,7 @@ export function RentalForm({ defaultMachine = "", className = "" }: Props) {
       }}
       noValidate
     >
-      <p className="text-sm text-muted">
-        Formulář zatím odesílání neposílá — po schválení napojíme na Resend.
-      </p>
-
-      <div className="mt-5 grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2">
         <label className="rental-field sm:col-span-2">
           <span>Jméno a příjmení</span>
           <input name="name" type="text" autoComplete="name" required />
@@ -82,7 +78,7 @@ export function RentalForm({ defaultMachine = "", className = "" }: Props) {
       </div>
 
       <button type="submit" className="btn btn-primary mt-6" disabled>
-        Odeslat poptávku (brzy)
+        Odeslat poptávku
       </button>
     </form>
   );

@@ -338,15 +338,17 @@ img {
   margin-left: 0.5rem;
   padding: 0 1rem;
   border-radius: var(--radius-btn);
-  background: #fff;
+  background: transparent;
+  border: 1.5px solid #fff;
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--brand);
-  transition: opacity 0.2s ease;
+  color: #fff;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .header-phone:hover {
-  opacity: 0.9;
+  background: #fff;
+  color: var(--brand);
 }
 
 .header-menu-btn {
@@ -468,17 +470,16 @@ footer {
   margin-left: 0.35rem;
   padding: 0 1rem;
   border-radius: var(--radius-btn);
-  background: transparent;
+  background: #fff;
   border: 1.5px solid #fff;
   font-size: 0.875rem;
   font-weight: 700;
-  color: #fff;
-  transition: background 0.2s ease, color 0.2s ease;
+  color: var(--brand);
+  transition: opacity 0.2s ease;
 }
 
 .header-rent:hover {
-  background: #fff;
-  color: var(--brand);
+  opacity: 0.9;
 }
 
 .breadcrumbs a:hover {

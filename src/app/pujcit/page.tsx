@@ -20,10 +20,6 @@ export default async function PujcitPage({ searchParams }: Props) {
         <h1 className="page-heading text-3xl font-bold tracking-tight md:text-4xl">
           Půjčit stroj
         </h1>
-        <p className="page-meta mt-3 text-base leading-relaxed">
-          Vyplňte poptávku — uvedete stroj a termín. Zatím formulář neodesílá,
-          po schválení ho napojíme na e-mail (Resend).
-        </p>
 
         <div className="surface-panel mt-8 p-6 md:p-8">
           <RentalForm defaultMachine={stroj ?? ""} />
