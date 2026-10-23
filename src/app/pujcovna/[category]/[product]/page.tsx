@@ -73,7 +73,7 @@ export default async function ProductPage({ params }: Props) {
               ) : null}
             </div>
 
-            <div id="poptavka" className="surface-panel scroll-mt-24 p-6 md:p-8">
+            <div className="surface-panel p-6 md:p-8">
               <h2 className="text-lg font-semibold text-ink">Půjčit tento stroj</h2>
               <div className="mt-5">
                 <RentalForm defaultMachine={machineValue} />

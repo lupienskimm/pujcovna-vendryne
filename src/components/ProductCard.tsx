@@ -19,7 +19,7 @@ export function ProductCard({
 }) {
   const price = firstPrice(product);
   const productHref = `/pujcovna/${product.categorySlug}/${product.slug}`;
-  const rentHref = `${productHref}#poptavka`;
+  const rentHref = productHref;
 
   return (
     <article className="pv-card card-lift group flex h-full flex-col overflow-hidden">

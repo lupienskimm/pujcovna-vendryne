@@ -53,7 +53,7 @@
       "slug": "rypadla",
       "path": "/pujcovna/rypadla/",
       "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2021/05/Takeuchi-TB-210-siroko.jpg",
-      "productCount": 14,
+      "productCount": 13,
       "products": [
         {
           "name": "Takeuchi TB 210",
@@ -723,17 +723,6 @@
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
           "description": "Caterpillar 325D LN z kategorie Rypadla, hmotnost 28 tun, hloubkový dosah 6 m, výkon motoru 263 kW.",
-          "categoryName": "Rypadla"
-        },
-        {
-          "name": "Rypadla",
-          "slug": "#respond",
-          "categorySlug": "rypadla",
-          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2021/05/Takeuchi-TB-210-siroko.jpg",
-          "specs": [],
-          "pricing": [],
-          "pricingNote": null,
-          "description": "Rypadla z kategorie Rypadla.",
           "categoryName": "Rypadla"
         },
         {
