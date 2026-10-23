@@ -27,7 +27,7 @@ document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&
         </>
       ) : null}
       {!gaId ? (
-        <Script id="tel-track" strategy="afterInteractive">
+        <Script id="tel-track" strategy="lazyOnload">
           {`document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[data-track^="tel"]');if(!a||!window.plausible)return;window.plausible('Telephone Click',{props:{id:a.getAttribute('data-track')}});});`}
         </Script>
       ) : null}

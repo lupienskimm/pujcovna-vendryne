@@ -1,25 +1,8 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-import { FormEvent, useState } from "react";
-
 export function SearchBar({ className = "" }: { className?: string }) {
-  const router = useRouter();
-  const [q, setQ] = useState("");
-
-  function onSubmit(e: FormEvent) {
-    e.preventDefault();
-    const query = q.trim();
-    if (!query) {
-      router.push("/pujcovna");
-      return;
-    }
-    router.push(`/pujcovna?q=${encodeURIComponent(query)}`);
-  }
-
   return (
     <form
-      onSubmit={onSubmit}
+      action="/pujcovna"
+      method="get"
       className={`search-bar flex flex-col gap-3 sm:flex-row sm:items-center ${className}`}
       role="search"
     >
@@ -28,13 +11,14 @@ export function SearchBar({ className = "" }: { className?: string }) {
         <input
           type="search"
           name="q"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
           placeholder="Hledat …"
           className="w-full border-0 bg-transparent text-[15px] text-ink outline-none placeholder:text-muted/70"
         />
       </label>
-      <button type="submit" className="btn btn-dark search-bar-submit shrink-0 sm:!min-w-32">
+      <button
+        type="submit"
+        className="btn btn-dark search-bar-submit shrink-0 sm:!min-w-32"
+      >
         Hledat
       </button>
     </form>

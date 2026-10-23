@@ -1,8 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
 import { site } from "@/data/site";
 
 const nav = [
@@ -13,9 +9,6 @@ const nav = [
 ];
 
 export function Header() {
-  const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-
   return (
     <header className="site-header sticky top-0 z-50">
       <div className="container-pv flex h-14 items-center justify-between gap-4 md:h-[3.75rem]">
@@ -28,26 +21,19 @@ export function Header() {
           <img
             src="/logos/logo-wordmark.svg"
             alt={site.name}
+            width={248}
+            height={88}
+            decoding="async"
             className="header-logo-img"
           />
         </Link>
 
         <nav className="nav-desktop" aria-label="Hlavní menu">
-          {nav.map((item) => {
-            const active =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`nav-link${active ? " is-active" : ""}`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+          {nav.map((item) => (
+            <Link key={item.href} href={item.href} className="nav-link">
+              {item.label}
+            </Link>
+          ))}
           <a
             href={`tel:${site.phone.replace(/\s/g, "")}`}
             className="header-phone"
@@ -60,46 +46,37 @@ export function Header() {
           </Link>
         </nav>
 
-        <button
-          type="button"
-          className="nav-mobile-btn header-menu-btn"
-          aria-label="Menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span className="sr-only">Menu</span>
-          <span className="flex w-4 flex-col gap-1">
-            <span className="header-menu-bar" />
-            <span className="header-menu-bar" />
-            <span className="header-menu-bar" />
-          </span>
-        </button>
-      </div>
-
-      {open && (
-        <div className="header-mobile-panel md:hidden">
-          <nav className="flex flex-col gap-1" aria-label="Mobilní menu">
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="nav-link-mobile"
+        <details className="header-mobile-nav md:hidden">
+          <summary className="nav-mobile-btn header-menu-btn" aria-label="Menu">
+            <span className="sr-only">Menu</span>
+            <span className="flex w-4 flex-col gap-1" aria-hidden>
+              <span className="header-menu-bar" />
+              <span className="header-menu-bar" />
+              <span className="header-menu-bar" />
+            </span>
+          </summary>
+          <div className="header-mobile-panel">
+            <nav className="flex flex-col gap-1" aria-label="Mobilní menu">
+              {nav.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="nav-link-mobile"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <a
+                href={`tel:${site.phone.replace(/\s/g, "")}`}
+                className="nav-link-mobile font-semibold"
+                data-track="tel-header-mobile"
               >
-                {item.label}
-              </Link>
-            ))}
-            <a
-              href={`tel:${site.phone.replace(/\s/g, "")}`}
-              className="nav-link-mobile font-semibold"
-              data-track="tel-header-mobile"
-              onClick={() => setOpen(false)}
-            >
-              Tel: {site.phoneDisplay}
-            </a>
-          </nav>
-        </div>
-      )}
+                Tel: {site.phoneDisplay}
+              </a>
+            </nav>
+          </div>
+        </details>
+      </div>
     </header>
   );
 }

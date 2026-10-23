@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --brand: #e5322d;
+  /* #e0312c = same red family, meets WCAG 4.5:1 with white (was #e5322d @ 4.35) */
+  --brand: #e0312c;
   --brand-dark: #c42b26;
   --ink: #141414;
   --muted: #5c5c5c;
@@ -28,6 +29,20 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {
@@ -248,15 +263,35 @@ img {
   color: #fff;
 }
 
+/* Transform-only: opacity:0 + fill-mode:both delayed LCP/text paint */
 @keyframes fade-up {
   from {
-    opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  opacity: 0.5;
+}
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 55%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
 }
 
 .animate-fade-up {
@@ -301,7 +336,32 @@ img {
 
 .nav-mobile-btn {
   display: inline-flex;
+  list-style: none;
 }
+
+.header-mobile-nav {
+  position: static;
+}
+
+.header-mobile-nav > summary {
+  cursor: pointer;
+}
+
+.header-mobile-nav > summary::-webkit-details-marker {
+  display: none;
+}
+
+.header-mobile-nav .header-mobile-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: var(--header-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.75rem 1rem;
+  z-index: 60;
+}
+
 
 @media (min-width: 768px) {
   .nav-desktop {
@@ -673,6 +733,32 @@ a.page-nav-btn {
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--muted);
+}
+
+.review-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.review-dot-pip {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--line);
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+.review-dot-pip.is-active {
+  width: 1.5rem;
+  background: var(--brand);
 }
 
 .card-cta-btn {

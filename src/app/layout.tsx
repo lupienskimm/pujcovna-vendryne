@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
-import { CardStyleDock } from "@/components/CardStyleDock";
+import { DeferredCardStyleDock } from "@/components/DeferredCardStyleDock";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/data/site";
@@ -9,9 +9,10 @@ import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "600", "700"],
+  subsets: ["latin-ext"],
   display: "swap",
+  adjustFontFallback: true,
+  preload: false,
 });
 
 const siteUrl =
@@ -60,6 +61,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/hero/excavator-900.webp"
+          type="image/webp"
+          fetchPriority="high"
+        />
         <script dangerouslySetInnerHTML={{ __html: cardStyleInit }} />
       </head>
       <body className="flex min-h-full flex-col font-sans">
@@ -68,7 +76,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
-        <CardStyleDock />
+        <DeferredCardStyleDock />
         <Analytics />
       </body>
     </html>

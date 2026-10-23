@@ -30,7 +30,7 @@ export function CardStyleDock() {
   }, [style, ready]);
 
   return (
-    <div className="card-style-dock" aria-label="Styl karet">
+    <div className="card-style-dock" role="group" aria-label="Styl karet">
       {OPTIONS.map((opt) => (
         <button
           key={opt.id}

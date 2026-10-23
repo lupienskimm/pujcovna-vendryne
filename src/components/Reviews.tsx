@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 
 function Stars({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-0.5" aria-label={`${rating} z 5`}>
+    <div className="flex gap-0.5" role="img" aria-label={`${rating} z 5`}>
       {Array.from({ length: 5 }, (_, i) => (
         <svg
           key={i}
@@ -135,17 +135,20 @@ export function Reviews() {
           </div>
         </div>
 
-        <div className="mt-5 flex justify-center gap-2">
+        <div className="mt-5 flex justify-center gap-1">
           {reviews.map((r, i) => (
             <button
               key={r.author + i}
               type="button"
               aria-label={`Recenze ${i + 1}`}
-              className={`h-2 rounded-full transition-all ${
-                i === index ? "w-6 bg-brand" : "w-2 bg-line"
-              }`}
+              aria-current={i === index ? "true" : undefined}
+              className="review-dot"
               onClick={() => setIndex(i)}
-            />
+            >
+              <span
+                className={`review-dot-pip${i === index ? " is-active" : ""}`}
+              />
+            </button>
           ))}
         </div>
       </div>

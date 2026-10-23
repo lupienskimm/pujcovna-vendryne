@@ -1,11 +1,15 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { CategoryCard } from "@/components/CategoryCard";
 import { Hero } from "@/components/Hero";
 import { MapBlock } from "@/components/MapBlock";
 import { ProductCard } from "@/components/ProductCard";
-import { Reviews } from "@/components/Reviews";
 import { categories, site } from "@/data/site";
+
+const Reviews = dynamic(() =>
+  import("@/components/Reviews").then((m) => m.Reviews)
+);
 
 export default function HomePage() {
   const featured = categories
