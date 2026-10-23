@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export type PageBg = "white" | "red" | "black";
 export type PageLayout = "page" | "island";
-export type PagePattern = "on" | "off";
+export type PagePattern = "none" | "poly" | "grid" | "dots" | "lines" | "chevrons";
 
 const BG_OPTIONS: { id: PageBg; label: string; swatch: string }[] = [
   { id: "white", label: "Bílá", swatch: "#ffffff" },
@@ -18,18 +18,47 @@ const LAYOUT_OPTIONS: { id: PageLayout; label: string }[] = [
 ];
 
 const PATTERN_OPTIONS: { id: PagePattern; label: string }[] = [
-  { id: "on", label: "Vzor" },
-  { id: "off", label: "Bez" },
+  { id: "none", label: "Bez" },
+  { id: "poly", label: "Poly" },
+  { id: "grid", label: "Mříž" },
+  { id: "dots", label: "Tečky" },
+  { id: "lines", label: "Pruhy" },
+  { id: "chevrons", label: "Šipky" },
 ];
+
+const PATTERN_IDS = new Set(PATTERN_OPTIONS.map((o) => o.id));
 
 const BG_KEY = "pv-page-bg";
 const LAYOUT_KEY = "pv-page-layout";
 const PATTERN_KEY = "pv-page-pattern";
+const OPACITY_KEY = "pv-pattern-opacity";
+
+const DEFAULT_OPACITY = 55;
+
+function clampOpacity(value: number) {
+  if (Number.isNaN(value)) return DEFAULT_OPACITY;
+  return Math.min(100, Math.max(0, Math.round(value)));
+}
+
+function migratePattern(raw: string | null): PagePattern {
+  if (raw === "on") return "poly";
+  if (raw === "off") return "none";
+  if (raw && PATTERN_IDS.has(raw as PagePattern)) return raw as PagePattern;
+  return "poly";
+}
+
+function applyOpacity(value: number) {
+  document.documentElement.style.setProperty(
+    "--pattern-opacity",
+    String(value / 100)
+  );
+}
 
 export function ThemeDock() {
   const [bg, setBg] = useState<PageBg>("white");
   const [layout, setLayout] = useState<PageLayout>("page");
-  const [pattern, setPattern] = useState<PagePattern>("on");
+  const [pattern, setPattern] = useState<PagePattern>("poly");
+  const [opacity, setOpacity] = useState(DEFAULT_OPACITY);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -37,9 +66,8 @@ export function ThemeDock() {
     const savedLayout = window.localStorage.getItem(
       LAYOUT_KEY
     ) as PageLayout | null;
-    const savedPattern = window.localStorage.getItem(
-      PATTERN_KEY
-    ) as PagePattern | null;
+    const savedPattern = window.localStorage.getItem(PATTERN_KEY);
+    const savedOpacity = window.localStorage.getItem(OPACITY_KEY);
 
     const nextBg =
       savedBg === "white" || savedBg === "red" || savedBg === "black"
@@ -47,15 +75,19 @@ export function ThemeDock() {
         : "white";
     const nextLayout =
       savedLayout === "page" || savedLayout === "island" ? savedLayout : "page";
-    const nextPattern =
-      savedPattern === "on" || savedPattern === "off" ? savedPattern : "on";
+    const nextPattern = migratePattern(savedPattern);
+    const nextOpacity = clampOpacity(
+      savedOpacity == null ? DEFAULT_OPACITY : Number(savedOpacity)
+    );
 
     setBg(nextBg);
     setLayout(nextLayout);
     setPattern(nextPattern);
+    setOpacity(nextOpacity);
     document.documentElement.dataset.bg = nextBg;
     document.documentElement.dataset.layout = nextLayout;
     document.documentElement.dataset.pattern = nextPattern;
+    applyOpacity(nextOpacity);
     setReady(true);
   }, []);
 
@@ -76,6 +108,12 @@ export function ThemeDock() {
     document.documentElement.dataset.pattern = pattern;
     window.localStorage.setItem(PATTERN_KEY, pattern);
   }, [pattern, ready]);
+
+  useEffect(() => {
+    if (!ready) return;
+    applyOpacity(opacity);
+    window.localStorage.setItem(OPACITY_KEY, String(opacity));
+  }, [opacity, ready]);
 
   return (
     <div className="theme-dock" aria-label="Vzhled stránky">
@@ -112,7 +150,11 @@ export function ThemeDock() {
         ))}
       </div>
       <span className="theme-dock-sep" aria-hidden />
-      <div className="theme-dock-group" role="group" aria-label="Vzor pozadí">
+      <div
+        className="theme-dock-group theme-dock-patterns"
+        role="group"
+        aria-label="Vzor pozadí"
+      >
         {PATTERN_OPTIONS.map((opt) => (
           <button
             key={opt.id}
@@ -125,6 +167,22 @@ export function ThemeDock() {
           </button>
         ))}
       </div>
+      <span className="theme-dock-sep" aria-hidden />
+      <label className="theme-dock-opacity">
+        <span className="theme-dock-opacity-label">
+          Vzor {pattern === "none" ? "—" : `${opacity}%`}
+        </span>
+        <input
+          type="range"
+          min={0}
+          max={100}
+          step={5}
+          value={opacity}
+          disabled={pattern === "none"}
+          aria-label="Průhlednost vzoru"
+          onChange={(e) => setOpacity(clampOpacity(Number(e.target.value)))}
+        />
+      </label>
     </div>
   );
 }
