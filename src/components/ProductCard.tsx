@@ -18,14 +18,13 @@ export function ProductCard({
   categoryName?: string;
 }) {
   const price = firstPrice(product);
-  const rentHref = `/pujcit?stroj=${encodeURIComponent(
-    `${categoryName ? `${categoryName} — ` : ""}${product.name}`
-  )}`;
+  const productHref = `/pujcovna/${product.categorySlug}/${product.slug}`;
+  const rentHref = `${productHref}#poptavka`;
 
   return (
     <article className="pv-card card-lift group flex h-full flex-col overflow-hidden">
       <Link
-        href={`/pujcovna/${product.categorySlug}/${product.slug}`}
+        href={productHref}
         className="relative aspect-[4/3] bg-white"
       >
         {product.image ? (
@@ -45,7 +44,7 @@ export function ProductCard({
             {categoryName}
           </p>
         ) : null}
-        <Link href={`/pujcovna/${product.categorySlug}/${product.slug}`}>
+        <Link href={productHref}>
           <h3 className="text-[15px] font-semibold leading-snug text-ink group-hover:text-brand">
             {product.name}
           </h3>

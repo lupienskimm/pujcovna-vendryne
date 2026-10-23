@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
 import { CardStyleDock } from "@/components/CardStyleDock";
-import { FloatingCall } from "@/components/FloatingCall";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/data/site";
@@ -57,7 +56,7 @@ export default function RootLayout({
     <html
       lang="cs"
       className={`${inter.variable} h-full antialiased`}
-      data-cards="lift"
+      data-cards="flat"
       suppressHydrationWarning
     >
       <head>
@@ -69,7 +68,6 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
-        <FloatingCall />
         <CardStyleDock />
         <Analytics />
       </body>

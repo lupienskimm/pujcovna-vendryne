@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RentalForm } from "@/components/RentalForm";
 import {
   categories,
   getCategory,
@@ -44,9 +44,7 @@ export default async function ProductPage({ params }: Props) {
   const product = getProduct(categorySlug, productSlug);
   if (!category || !product) notFound();
 
-  const rentHref = `/pujcit?stroj=${encodeURIComponent(
-    `${category.name} — ${product.name}`
-  )}`;
+  const machineValue = `${category.name} — ${product.name}`;
 
   return (
     <div className="pb-16 pt-10 md:pb-20 md:pt-12">
@@ -61,17 +59,26 @@ export default async function ProductPage({ params }: Props) {
         />
 
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_1fr]">
-          <div className="relative aspect-square overflow-hidden rounded-[var(--radius-lg)] border border-line bg-white lg:aspect-[4/3]">
-            {product.image ? (
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                className="object-contain p-6"
-                sizes="(max-width:1024px) 100vw, 50vw"
-                priority
-              />
-            ) : null}
+          <div className="space-y-8">
+            <div className="relative aspect-square overflow-hidden rounded-[var(--radius-lg)] border border-line bg-white lg:aspect-[4/3]">
+              {product.image ? (
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-contain p-6"
+                  sizes="(max-width:1024px) 100vw, 50vw"
+                  priority
+                />
+              ) : null}
+            </div>
+
+            <div id="poptavka" className="surface-panel scroll-mt-24 p-6 md:p-8">
+              <h2 className="text-lg font-semibold text-ink">Půjčit tento stroj</h2>
+              <div className="mt-5">
+                <RentalForm defaultMachine={machineValue} />
+              </div>
+            </div>
           </div>
 
           <div>
@@ -137,25 +144,20 @@ export default async function ProductPage({ params }: Props) {
               </div>
             ) : null}
 
-            <div className="surface-panel mt-8 p-5">
-              <p className="text-sm leading-relaxed text-muted">
-                Zavolejte, napište, nebo rovnou vyplňte poptávku na půjčení.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-3">
-                <a
-                  href={`tel:${site.phone.replace(/\s/g, "")}`}
-                  className="btn btn-primary"
-                  data-track="tel-product"
-                >
-                  Tel: {site.phoneDisplay}
-                </a>
-                <Link href={rentHref} className="btn btn-dark">
-                  Půjčit / poptávka
-                </Link>
-                <a href={`mailto:${site.email}`} className="btn border border-line bg-white text-ink">
-                  E-mail
-                </a>
-              </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={`tel:${site.phone.replace(/\s/g, "")}`}
+                className="btn btn-primary"
+                data-track="tel-product"
+              >
+                Tel: {site.phoneDisplay}
+              </a>
+              <a
+                href={`mailto:${site.email}`}
+                className="btn border border-line bg-white text-ink"
+              >
+                E-mail
+              </a>
             </div>
           </div>
         </div>
