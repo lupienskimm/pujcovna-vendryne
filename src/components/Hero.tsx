@@ -43,7 +43,7 @@ export function Hero() {
           </div>
           <div className="animate-fade-up delay-3 mt-8 flex flex-wrap gap-3">
             <Link href="/pujcovna" className="btn btn-primary">
-              Půjčovna
+              Sortiment
             </Link>
             <Link href="/pujcit" className="btn btn-ghost">
               Půjčit stroj

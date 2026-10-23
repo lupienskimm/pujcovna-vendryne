@@ -10,7 +10,7 @@ type Props = {
 };
 
 export const metadata: Metadata = {
-  title: "Půjčovna",
+  title: "Sortiment",
   description:
     "Kompletní katalog stavební techniky k půjčení — rypadla, dumpery, plošiny a další.",
 };
@@ -25,11 +25,11 @@ export default async function PujcovnaPage({ searchParams }: Props) {
         <Breadcrumbs
           items={[
             { href: "/", label: "Úvod" },
-            { label: "Půjčovna" },
+            { label: "Sortiment" },
           ]}
         />
         <h1 className="page-heading mt-4 text-3xl font-bold tracking-tight md:text-4xl">
-          Půjčovna
+          Sortiment
         </h1>
         <div className="mt-6 max-w-3xl">
           <SearchBar />

@@ -49,7 +49,7 @@ export function Footer() {
           </ul>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
             <Link href="/pujcovna" className="rounded-[var(--radius-btn)] bg-white/10 px-3 py-1.5 hover:bg-white/15">
-              Půjčovna
+              Sortiment
             </Link>
             <Link href="/pujcit" className="rounded-[var(--radius-btn)] bg-white/10 px-3 py-1.5 hover:bg-white/15">
               Půjčit

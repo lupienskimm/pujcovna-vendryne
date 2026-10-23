@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="container-pv">
           <h2 className="section-title">Kategorie</h2>
           <p className="page-meta mx-auto mt-3 max-w-2xl text-center text-sm">
-            Vyberte typ techniky a prohlédněte kompletní nabídku půjčovny.
+            Vyberte typ techniky a prohlédněte kompletní sortiment.
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => (
@@ -31,7 +31,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8 text-center">
             <Link href="/pujcovna" className="btn btn-primary">
-              Celá půjčovna
+              Celý sortiment
             </Link>
           </div>
         </div>

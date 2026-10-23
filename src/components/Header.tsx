@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 
 const nav = [
   { href: "/", label: "Úvod" },
-  { href: "/pujcovna", label: "Půjčovna" },
+  { href: "/pujcovna", label: "Sortiment" },
   { href: "/pujcit", label: "Půjčit" },
   { href: "/kontakt", label: "Kontakt" },
 ];
