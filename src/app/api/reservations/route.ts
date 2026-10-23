@@ -20,14 +20,7 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  const body = (await req.json()) as Partial<Reservation> & {
-    password?: string;
-  };
-
-  const expected = process.env.SPRAVA_PASSWORD || "vendryne";
-  if (body.password !== expected) {
-    return NextResponse.json({ error: "Neplatné heslo." }, { status: 401 });
-  }
+  const body = (await req.json()) as Partial<Reservation>;
 
   if (
     !body.machineKey ||
@@ -46,12 +39,7 @@ export async function POST(req: NextRequest) {
 
   const list = await readReservations();
   if (
-    !rangeIsAvailable(
-      list,
-      body.machineKey,
-      body.dateFrom,
-      body.dateTo
-    )
+    !rangeIsAvailable(list, body.machineKey, body.dateFrom, body.dateTo)
   ) {
     return NextResponse.json(
       { error: "V tomto termínu je stroj už rezervovaný." },
@@ -82,16 +70,14 @@ export async function PATCH(req: NextRequest) {
   const body = (await req.json()) as {
     id?: string;
     status?: Reservation["status"];
-    password?: string;
     dateTo?: string;
   };
 
-  const expected = process.env.SPRAVA_PASSWORD || "vendryne";
-  if (body.password !== expected) {
-    return NextResponse.json({ error: "Neplatné heslo." }, { status: 401 });
-  }
   if (!body.id || !body.status) {
-    return NextResponse.json({ error: "Chybí id nebo status." }, { status: 400 });
+    return NextResponse.json(
+      { error: "Chybí id nebo status." },
+      { status: 400 }
+    );
   }
 
   const list = await readReservations();
@@ -117,11 +103,7 @@ export async function PATCH(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
-  const body = (await req.json()) as { id?: string; password?: string };
-  const expected = process.env.SPRAVA_PASSWORD || "vendryne";
-  if (body.password !== expected) {
-    return NextResponse.json({ error: "Neplatné heslo." }, { status: 401 });
-  }
+  const body = (await req.json()) as { id?: string };
   if (!body.id) {
     return NextResponse.json({ error: "Chybí id." }, { status: 400 });
   }

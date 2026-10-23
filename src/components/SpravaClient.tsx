@@ -22,11 +22,7 @@ const machines = categories.flatMap((c) =>
   }))
 );
 
-const PASS_KEY = "pv-sprava-pass";
-
 export function SpravaClient() {
-  const [password, setPassword] = useState("");
-  const [authed, setAuthed] = useState(false);
   const [list, setList] = useState<Reservation[]>([]);
   const [today, setToday] = useState(todayISO());
   const [error, setError] = useState("");
@@ -52,11 +48,6 @@ export function SpravaClient() {
   }, []);
 
   useEffect(() => {
-    const saved = sessionStorage.getItem(PASS_KEY);
-    if (saved) {
-      setPassword(saved);
-      setAuthed(true);
-    }
     load().catch(() => setError("Nepodařilo se načíst rezervace."));
   }, [load]);
 
@@ -68,28 +59,6 @@ export function SpravaClient() {
     () => list.filter((r) => !isBlocking(r, today)),
     [list, today]
   );
-
-  async function unlock(e: FormEvent) {
-    e.preventDefault();
-    setError("");
-    // Probe with a no-op-ish check: try PATCH missing id → 404 means password OK, 401 bad
-    const res = await fetch("/api/reservations", {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: "__probe__",
-        status: "cancelled",
-        password,
-      }),
-    });
-    if (res.status === 401) {
-      setError("Špatné heslo.");
-      setAuthed(false);
-      return;
-    }
-    sessionStorage.setItem(PASS_KEY, password);
-    setAuthed(true);
-  }
 
   async function addReservation(e: FormEvent) {
     e.preventDefault();
@@ -103,7 +72,6 @@ export function SpravaClient() {
         ...form,
         machineLabel: machine?.label ?? form.machineKey,
         source: "manual",
-        password,
       }),
     });
     const data = await res.json();
@@ -123,10 +91,7 @@ export function SpravaClient() {
     await load();
   }
 
-  async function setStatus(
-    id: string,
-    status: Reservation["status"]
-  ) {
+  async function setStatus(id: string, status: Reservation["status"]) {
     setBusy(true);
     setError("");
     const res = await fetch("/api/reservations", {
@@ -135,7 +100,6 @@ export function SpravaClient() {
       body: JSON.stringify({
         id,
         status,
-        password,
         dateTo: status === "returned" ? today : undefined,
       }),
     });
@@ -154,7 +118,7 @@ export function SpravaClient() {
     const res = await fetch("/api/reservations", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id, password }),
+      body: JSON.stringify({ id }),
     });
     setBusy(false);
     if (!res.ok) {
@@ -163,27 +127,6 @@ export function SpravaClient() {
       return;
     }
     await load();
-  }
-
-  if (!authed) {
-    return (
-      <form onSubmit={unlock} className="surface-panel max-w-md p-6">
-        <label className="rental-field">
-          <span>Heslo správy</span>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete="current-password"
-            required
-          />
-        </label>
-        {error ? <p className="mt-3 text-sm text-brand">{error}</p> : null}
-        <button type="submit" className="btn btn-primary mt-5">
-          Vstoupit
-        </button>
-      </form>
-    );
   }
 
   return (
@@ -271,11 +214,7 @@ export function SpravaClient() {
             />
           </label>
           <div className="sm:col-span-2">
-            <button
-              type="submit"
-              className="btn btn-primary"
-              disabled={busy}
-            >
+            <button type="submit" className="btn btn-primary" disabled={busy}>
               Uložit rezervaci
             </button>
           </div>
