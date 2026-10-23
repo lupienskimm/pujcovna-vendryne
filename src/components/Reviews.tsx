@@ -79,9 +79,9 @@ export function Reviews() {
   }, [count]);
 
   return (
-    <section id="recenze" className="overflow-hidden bg-surface py-16 md:py-20">
+    <section id="recenze" className="surface-band overflow-hidden py-16 md:py-20">
       <div className="container-pv">
-        <h2 className="section-title">{site.reviewsTitle}</h2>
+        <h2 className="section-title section-title-on-light">{site.reviewsTitle}</h2>
         <div className="mt-5 flex justify-center gap-2">
           <button
             type="button"

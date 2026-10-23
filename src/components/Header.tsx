@@ -8,6 +8,7 @@ import { site } from "@/data/site";
 const nav = [
   { href: "/", label: "Úvod" },
   { href: "/pujcovna", label: "Půjčovna" },
+  { href: "/pujcit", label: "Půjčit" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -50,9 +51,13 @@ export function Header() {
           <a
             href={`tel:${site.phone.replace(/\s/g, "")}`}
             className="header-phone"
+            data-track="tel-header"
           >
             {site.phoneDisplay}
           </a>
+          <Link href="/pujcit" className="header-rent">
+            Půjčit
+          </Link>
         </nav>
 
         <button
@@ -84,6 +89,14 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            <a
+              href={`tel:${site.phone.replace(/\s/g, "")}`}
+              className="nav-link-mobile font-semibold"
+              data-track="tel-header-mobile"
+              onClick={() => setOpen(false)}
+            >
+              Tel: {site.phoneDisplay}
+            </a>
           </nav>
         </div>
       )}

@@ -3,19 +3,17 @@ import Link from "next/link";
 import { site } from "@/data/site";
 import { SearchBar } from "./SearchBar";
 
-const HERO_BG =
-  "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=2400";
-
 export function Hero() {
   return (
     <>
       <section className="hero-panel relative overflow-hidden bg-ink text-white">
         <div className="absolute inset-0">
           <Image
-            src={HERO_BG}
+            src="/hero/excavator.jpg"
             alt=""
             fill
             priority
+            quality={70}
             className="object-cover object-[center_45%] opacity-50"
             sizes="100vw"
           />
@@ -38,9 +36,17 @@ export function Hero() {
           <p className="animate-fade-up delay-2 mt-4 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
             {site.intro}
           </p>
+          <div className="animate-fade-up delay-3 mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/75">
+            <span>{site.hours.weekdays}</span>
+            <span>{site.hours.saturday}</span>
+            <span>{site.address}</span>
+          </div>
           <div className="animate-fade-up delay-3 mt-8 flex flex-wrap gap-3">
             <Link href="/pujcovna" className="btn btn-primary">
               Půjčovna
+            </Link>
+            <Link href="/pujcit" className="btn btn-ghost">
+              Půjčit stroj
             </Link>
             <Link href="/kontakt" className="btn btn-ghost">
               Kontakt

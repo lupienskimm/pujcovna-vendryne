@@ -17,8 +17,9 @@ export function CategoryCard({ category }: { category: Category }) {
         {category.image ? (
           <Image
             src={category.image}
-            alt={category.name}
+            alt=""
             fill
+            loading="lazy"
             className="object-contain p-1"
             sizes="80px"
           />

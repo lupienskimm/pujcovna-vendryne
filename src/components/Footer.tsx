@@ -47,11 +47,14 @@ export function Footer() {
             </li>
             <li>ADRESA: {site.address}</li>
           </ul>
-          <div className="mt-4 flex gap-3 text-sm">
-            <Link href="/pujcovna" className="rounded-full bg-white/10 px-3 py-1.5 hover:bg-white/15">
+          <div className="mt-4 flex flex-wrap gap-3 text-sm">
+            <Link href="/pujcovna" className="rounded-[var(--radius-btn)] bg-white/10 px-3 py-1.5 hover:bg-white/15">
               Půjčovna
             </Link>
-            <Link href="/kontakt" className="rounded-full bg-white/10 px-3 py-1.5 hover:bg-white/15">
+            <Link href="/pujcit" className="rounded-[var(--radius-btn)] bg-white/10 px-3 py-1.5 hover:bg-white/15">
+              Půjčit
+            </Link>
+            <Link href="/kontakt" className="rounded-[var(--radius-btn)] bg-white/10 px-3 py-1.5 hover:bg-white/15">
               Kontakt
             </Link>
             <a

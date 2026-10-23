@@ -110,7 +110,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Takeuchi TB 210 z kategorie Rypadla, výkon 8,8 / 11,9 kW/PS, hmotnost 1 201 kg, hloubkový dosah 1 755 mm.",
           "categoryName": "Rypadla"
         },
         {
@@ -296,7 +296,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Takeuchi TB 230 z kategorie Rypadla, výkon 17,6 / 23,6 kW/PS, hmotnost 3 128 kg, hloubkový dosah 2 835 mm.",
           "categoryName": "Rypadla"
         },
         {
@@ -358,14 +358,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Takeuchi TB 240 z kategorie Rypadla, výkon 27,2 / 36,9 kW/PS, hmotnost 4 413 kg, hloubkový dosah 3 465 mm.",
           "categoryName": "Rypadla"
         },
         {
           "name": "Takeuchi TB 250",
           "slug": "takeuchi-tb-250",
           "categorySlug": "rypadla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/TAKEUCHI-TB-250-2.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/TAKEUCHI-TB-250-2.jpg",
           "specs": [
             {
               "label": "Hloubkový dosah:",
@@ -420,7 +420,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Takeuchi TB 250 z kategorie Rypadla, výkon 29,1 Kw, hmotnost 5 360 kg, hloubkový dosah 3 620 mm.",
           "categoryName": "Rypadla"
         },
         {
@@ -489,7 +489,7 @@
           "name": "Takeuchi TB325R",
           "slug": "takeuchi-tb325r",
           "categorySlug": "rypadla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/11/Takeuchi-bagr-TB325.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/11/Takeuchi-bagr-TB325.png",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -536,14 +536,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Takeuchi TB325R z kategorie Rypadla, hmotnost 2,5 t, hloubkový dosah 2,54 m, palivo Diesel.",
           "categoryName": "Rypadla"
         },
         {
           "name": "Takeuchi TB 370",
           "slug": "takeuchi-tb-370",
           "categorySlug": "rypadla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/TAKEUCHI-TB-370-1024x684.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/TAKEUCHI-TB-370-1024x684.jpg",
           "specs": [
             {
               "label": "Hloubkový dosah:",
@@ -598,14 +598,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Takeuchi TB 370 z kategorie Rypadla, výkon 42,4 Kw, hmotnost 7 050 kg, hloubkový dosah 4 085 mm.",
           "categoryName": "Rypadla"
         },
         {
           "name": "Takeuchi TB 290-2-V",
           "slug": "takeuchi-tb-290-2-v",
           "categorySlug": "rypadla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/TAKEUCHI-TB-290-2-V.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/TAKEUCHI-TB-290-2-V.jpg",
           "specs": [
             {
               "label": "Hloubkový dosah:",
@@ -664,7 +664,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Takeuchi TB 290-2-V z kategorie Rypadla, výkon 51,6 Kw, hmotnost 9 267 kg, hloubkový dosah 4 480 mm.",
           "categoryName": "Rypadla"
         },
         {
@@ -722,7 +722,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Caterpillar 325D LN z kategorie Rypadla, hmotnost 28 tun, hloubkový dosah 6 m, výkon motoru 263 kW.",
           "categoryName": "Rypadla"
         },
         {
@@ -733,14 +733,14 @@
           "specs": [],
           "pricing": [],
           "pricingNote": null,
-          "description": null,
+          "description": "Rypadla z kategorie Rypadla.",
           "categoryName": "Rypadla"
         },
         {
           "name": "Takeuchi TB 225",
           "slug": "takeuchi-tb-255",
           "categorySlug": "rypadla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/Takeuchi-TB255-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/Takeuchi-TB255-400x400-1.png",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -783,7 +783,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Takeuchi TB 225 z kategorie Rypadla, hmotnost 2.4 tun, hloubkový dosah 2.58 m, přepravní šířka 1.5 m."
         },
         {
           "name": "Wacker Neuson 9503",
@@ -848,7 +848,7 @@
       "name": "Příslušenství k rypadlům",
       "slug": "prislusenstvi-k-rypadlum",
       "path": "/pujcovna/prislusenstvi-k-rypadlum/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/SQ-20-400x400-1.png",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/SQ-20-400x400-1.png",
       "productCount": 10,
       "products": [
         {
@@ -918,7 +918,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email: Vaše jméno (vyžadováno) Váš e-mail (vyžadováno) Jaký stroj/nářadí si chcete zapůjčit? Vaše zpráva Δ /* <![CDATA[ */ document.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Hydraulické kladivo Soosan Sq 20 z kategorie Příslušenství k rypadlům, použitelná hmotnost nosiče 1,2 – 3 t, celková hmotnost 130 kg, celková délka 1 213mm.",
           "categoryName": "Příslušenství k rypadlům"
         },
         {
@@ -988,7 +988,7 @@
             }
           ],
           "pricingNote": null,
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Hydraulické kladivo Soosan Sq 30 z kategorie Příslušenství k rypadlům, použitelná hmotnost nosiče 2 – 4,5 t, celková hmotnost 156 kg, celková délka 1 317mm.",
           "categoryName": "Příslušenství k rypadlům"
         },
         {
@@ -1058,7 +1058,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email: Vaše jméno (vyžadováno) Váš e-mail (vyžadováno) Jaký stroj/nářadí si chcete zapůjčit? Vaše zpráva Δ /* <![CDATA[ */ document.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Hydraulické kladivo Soosan SQ 40 z kategorie Příslušenství k rypadlům, použitelná hmotnost 4 – 9 tun, celková hmotnost 299 kg, délka 1620 mm.",
           "categoryName": "Příslušenství k rypadlům"
         },
         {
@@ -1128,7 +1128,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email: Vaše jméno (vyžadováno) Váš e-mail (vyžadováno) Jaký stroj/nářadí si chcete zapůjčit? Vaše zpráva Δ /* <![CDATA[ */ document.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Hydraulické kladivo Soosan Sq 43 z kategorie Příslušenství k rypadlům, použitelná hmotnost 5 – 12 tun, celková hmotnost 379 kg, délka 1 899 mm.",
           "categoryName": "Příslušenství k rypadlům"
         },
         {
@@ -1427,7 +1427,7 @@
           "name": "Kleště na skruže",
           "slug": "kleste-na-skruze",
           "categorySlug": "prislusenstvi-k-rypadlum",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/Kleste-na-struze-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/Kleste-na-struze-400x400-1.png",
           "specs": [],
           "pricing": [
             {
@@ -1457,14 +1457,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email: Vaše jméno (vyžadováno) Váš e-mail (vyžadováno) Jaký stroj/nářadí si chcete zapůjčit? Vaše zpráva Δ /* <![CDATA[ */ document.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Kleště na skruže z kategorie Příslušenství k rypadlům.",
           "categoryName": "Příslušenství k rypadlům"
         },
         {
           "name": "Sosan SQ 10",
           "slug": "montabert-sc08",
           "categorySlug": "prislusenstvi-k-rypadlum",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/02/hydraulicka-bouraci-kladiva-sq10-soosan.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/02/hydraulicka-bouraci-kladiva-sq10-soosan.jpg",
           "specs": [
             {
               "label": "Hmotnost",
@@ -1538,7 +1538,7 @@
           "name": "Dumper Wacker Neuson DT 12",
           "slug": "dumper-wacker-neuson-dt-12",
           "categorySlug": "dumpery",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/02/wacker-neuson-dt12.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/02/wacker-neuson-dt12.png",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -1597,7 +1597,7 @@
             }
           ],
           "pricingNote": null,
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Dumper Wacker Neuson DT 12 z kategorie Dumpery, hmotnost 790 kg, nosnost 1.2 t, přepravní délka 1.82 m.",
           "categoryName": "Dumpery"
         },
         {
@@ -1643,7 +1643,7 @@
             }
           ],
           "pricingNote": null,
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Dumper Terex TA9 z kategorie Dumpery, hmotnost 4 875 kg, nosnost 9 000 kg, palivo Diesel.",
           "categoryName": "Dumpery"
         },
         {
@@ -1716,7 +1716,7 @@
           "name": "Muck Truck 300",
           "slug": "muck-truck-300",
           "categorySlug": "dumpery",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/22-MOTOROVE-KOLECKO-MUCK-TRUCK-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/22-MOTOROVE-KOLECKO-MUCK-TRUCK-400x400-1.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -1759,13 +1759,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Muck Truck 300 z kategorie Dumpery, hmotnost 140 kg, nosnost 300 kg, palivo Benzín."
         },
         {
           "name": "Terex TA1eh",
           "slug": "terex-ta1eh",
           "categorySlug": "dumpery",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/21-DUMPER-TEREX-TA1EH-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/21-DUMPER-TEREX-TA1EH-400x400-1.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -1804,13 +1804,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Terex TA1eh z kategorie Dumpery, hmotnost 1 000 kg, nosnost 1 300 kg, palivo Diesel."
         },
         {
           "name": "Ausa D150 AHG",
           "slug": "ausa-d150-ahg",
           "categorySlug": "dumpery",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/20-DUMPER-AUSA-D150-AHG-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/20-DUMPER-AUSA-D150-AHG-400x400-1.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -1849,13 +1849,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Ausa D150 AHG z kategorie Dumpery, hmotnost 1 510 kg, nosnost 1 500 kg, palivo Diesel."
         },
         {
           "name": "Terex TA3s",
           "slug": "terex-ta3s",
           "categorySlug": "dumpery",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/18-DUMPER-TEREX-TA3S-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/18-DUMPER-TEREX-TA3S-400x400-1.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -1894,13 +1894,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Terex TA3s z kategorie Dumpery, hmotnost 2 550 kg, nosnost 3 000 kg, palivo Diesel."
         },
         {
           "name": "Terex PT6000",
           "slug": "terex-pt6000",
           "categorySlug": "dumpery",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/17-DUMPER-TEREX-PT600400x400.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/17-DUMPER-TEREX-PT600400x400.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -1939,7 +1939,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Terex PT6000 z kategorie Dumpery, hmotnost 4 800 kg, nosnost 6 000 kg, palivo Diesel."
         }
       ]
     },
@@ -1947,7 +1947,7 @@
       "name": "Vibrační technika",
       "slug": "vibracni-technika",
       "path": "/pujcovna/vibracni-technika/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/5-JEZKOVY-VALEC-WEBER-TRC-86-F-400x400-1.jpg",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/5-JEZKOVY-VALEC-WEBER-TRC-86-F-400x400-1.jpg",
       "productCount": 15,
       "products": [
         {
@@ -2713,7 +2713,7 @@
       "name": "Nakladače",
       "slug": "nakladace",
       "path": "/pujcovna/nakladace/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/12/Kubota-400x400-1.png",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/12/Kubota-400x400-1.png",
       "productCount": 4,
       "products": [
         {
@@ -2779,14 +2779,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Čelní nakladač Kubota R065 z kategorie Nakladače, hmotnost 4,51 t, šířka lžíce/lopaty 1,75 m, objem lžíce/lopaty 0,65 m³.",
           "categoryName": "Nakladače"
         },
         {
           "name": "Kubota R520",
           "slug": "kubota-r520",
           "categorySlug": "nakladace",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/kubota-r520-nakladac-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/kubota-r520-nakladac-400x400-1.png",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -2841,14 +2841,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Kubota R520 z kategorie Nakladače, hmotnost 4.26 t, nosnost 2 000kg, objem lžíce/lopaty 0.6 m3.",
           "categoryName": "Nakladače"
         },
         {
           "name": "Catepillar 226B",
           "slug": "catepillar-226b",
           "categorySlug": "nakladace",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/01/smykem-rizene-nakladace-226b-ii-caterpillar3-e1673726134387.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/01/smykem-rizene-nakladace-226b-ii-caterpillar3-e1673726134387.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -2911,14 +2911,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Catepillar 226B z kategorie Nakladače, hmotnost 2 640 kg, palivo Diesel, provozní kapacita 680 kg.",
           "categoryName": "Nakladače"
         },
         {
           "name": "Čelní nakladač Kramer 5035",
           "slug": "celni-nakladac-kramer-5035",
           "categorySlug": "nakladace",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/12/Kramer-535-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/12/Kramer-535-400x400-1.png",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -2981,7 +2981,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Čelní nakladač Kramer 5035 z kategorie Nakladače, hmotnost 1,63 t, šířka lžíce/lopaty 1,25 m, objem lžíce/lopaty 0,35 m³."
         }
       ]
     },
@@ -2989,14 +2989,14 @@
       "name": "Manipulátory",
       "slug": "manipulatory",
       "path": "/pujcovna/manipulatory/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/Merlo-manilulator-400x400-1.png",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/Merlo-manilulator-400x400-1.png",
       "productCount": 1,
       "products": [
         {
           "name": "Merlo P27.6",
           "slug": "merlo-p27-6",
           "categorySlug": "manipulatory",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/Merlo-manilulator-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/Merlo-manilulator-400x400-1.png",
           "specs": [
             {
               "label": "Pohotovostní hmotnost, s paletizačními vidlemi",
@@ -3055,7 +3055,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Merlo P27.6 z kategorie Manipulátory, pohotovostní hmotnost, s paletizačními vidlemi 4 900 kg, maximální nosnost 2 700 kg, maximální zdvih 6,1 m.",
           "categoryName": "Manipulátory"
         }
       ]
@@ -3145,7 +3145,7 @@
           "name": "Elektrocentrála Fogo HF 90012",
           "slug": "elektrocentrala-fogo-hf-90012",
           "categorySlug": "elektrocentraly",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/04/fogo-fh900012-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/04/fogo-fh900012-400x400-1.png",
           "specs": [
             {
               "label": "Výkon:",
@@ -3219,7 +3219,7 @@
           "name": "Distar 230V",
           "slug": "distar-230v",
           "categorySlug": "elektrocentraly",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/25-ELEKTROCENTRALA-DISTAR-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/25-ELEKTROCENTRALA-DISTAR-400x400-1.jpg",
           "specs": [
             {
               "label": "Výkon:",
@@ -3264,7 +3264,7 @@
           "name": "Honda 230/400V",
           "slug": "honda-230-400v",
           "categorySlug": "elektrocentraly",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/24-ELEKTROCENTRALA-HONDA-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/24-ELEKTROCENTRALA-HONDA-400x400-1.jpg",
           "specs": [
             {
               "label": "Výkon",
@@ -3311,7 +3311,7 @@
       "name": "Řezací a brousící technika",
       "slug": "rezaci-technika",
       "path": "/pujcovna/rezaci-technika/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/26-Stolova-okruzni-pila-hitachi-400x400-1.jpg",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/26-Stolova-okruzni-pila-hitachi-400x400-1.jpg",
       "productCount": 23,
       "products": [
         {
@@ -3476,7 +3476,7 @@
           "name": "Pásová bruska Hitachi",
           "slug": "pasova-bruska-hitachi",
           "categorySlug": "rezaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/bruska-Hitachi-SB-10V2-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/bruska-Hitachi-SB-10V2-400x400-1.png",
           "specs": [],
           "pricing": [
             {
@@ -3506,7 +3506,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Pásová bruska Hitachi z kategorie Řezací a brousící technika.",
           "categoryName": "Řezací a brousící technika"
         },
         {
@@ -3613,11 +3613,11 @@
           "name": "tech-wiert-tw-775",
           "slug": "tech-wiert-tw-775",
           "categorySlug": "rezaci-technika",
-          "image": null,
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/26-Stolova-okruzni-pila-hitachi-400x400-1.jpg",
           "specs": [],
           "pricing": [],
           "pricingNote": null,
-          "description": null
+          "description": "tech-wiert-tw-775 z kategorie Řezací a brousící technika."
         },
         {
           "name": "Cedima CTS – 56",
@@ -3781,7 +3781,7 @@
           "name": "Řezačka dlaždic PROFI EVO 133",
           "slug": "rezacka-dlazdic-profi-evo-133",
           "categorySlug": "rezaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/03/PROFI-EVO-133.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/03/PROFI-EVO-133.png",
           "specs": [
             {
               "label": "Max délka řezu:",
@@ -3828,14 +3828,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Řezačka dlaždic PROFI EVO 133 z kategorie Řezací a brousící technika, hmotnost 17 kg, max délka řezu 1 330 mm, max. rozměr dlaždice pro diagonální řez 940 x 940 mm.",
           "categoryName": "Řezací a brousící technika"
         },
         {
           "name": "Řezačka dlaždic PROFI EVO 63",
           "slug": "rezacka-dlazdic-profi-evo-63",
           "categorySlug": "rezaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/03/PROFI-EVO-63-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/03/PROFI-EVO-63-400x400-1.png",
           "specs": [
             {
               "label": "Max délka řezu:",
@@ -3882,7 +3882,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Řezačka dlaždic PROFI EVO 63 z kategorie Řezací a brousící technika, hmotnost 9,5 kg, max délka řezu 630 mm, max. rozměr dlaždice pro diagonální řez 440 x 440 mm.",
           "categoryName": "Řezací a brousící technika"
         },
         {
@@ -4086,7 +4086,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Hitachi P20ST z kategorie Řezací a brousící technika, hmotnost 2,5 kg, hoblovací šířka 82 mm, příslušenství oboustranný nůž, klíč.",
           "categoryName": "Řezací a brousící technika"
         },
         {
@@ -4136,7 +4136,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Makita 1806B z kategorie Řezací a brousící technika, hmotnost 9 kg, hoblovací šířka 170 mm, příslušenství oboustranný nůž, klíč.",
           "categoryName": "Řezací a brousící technika"
         },
         {
@@ -4385,13 +4385,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "AEG z kategorie Řezací a brousící technika, napětí 230 V, hmotnost 4,1 kg, příslušenství* kotouč, klíč."
         },
         {
           "name": "Řezačka na polystyren Remotech",
           "slug": "rezacka-na-polystyren-remotech",
           "categorySlug": "rezaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/04/remontech-rezacka-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/04/remontech-rezacka-400x400-1.png",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -4450,14 +4450,14 @@
       "name": "Bourací a vrtací technika",
       "slug": "bouraci-a-vrtaci-technika",
       "path": "/pujcovna/bouraci-a-vrtaci-technika/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2021/01/60439b7603a6adcd6b9f1cd3daa69935-mmf1000x1000.jpg",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2021/01/60439b7603a6adcd6b9f1cd3daa69935-mmf1000x1000.jpg",
       "productCount": 8,
       "products": [
         {
           "name": "Hitachi H90SG",
           "slug": "hitachi-h90sg",
           "categorySlug": "bouraci-a-vrtaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2021/01/60439b7603a6adcd6b9f1cd3daa69935-mmf1000x1000.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2021/01/60439b7603a6adcd6b9f1cd3daa69935-mmf1000x1000.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -4545,7 +4545,7 @@
           "name": "Hitachi H65SB2",
           "slug": "hitachi-h65sb2",
           "categorySlug": "bouraci-a-vrtaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/45-bouraci-kladivo-hitachi-H65SB2400x400.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/45-bouraci-kladivo-hitachi-H65SB2400x400.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -4590,7 +4590,7 @@
           "name": "Hitachi H60MC",
           "slug": "hitachi-h60mc",
           "categorySlug": "bouraci-a-vrtaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/46-Bouraci-kladivo-Hitachi-H-60MC400x400.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/46-Bouraci-kladivo-Hitachi-H-60MC400x400.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -4635,7 +4635,7 @@
           "name": "Hitachi H41MB",
           "slug": "hitachi-h41mb",
           "categorySlug": "bouraci-a-vrtaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/46-Bouraci-kladivo-Hitachi-H-60MC400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/46-Bouraci-kladivo-Hitachi-H-60MC400x400-1.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -4680,7 +4680,7 @@
           "name": "Hitachi DH45MR",
           "slug": "hitachi-dh45mr",
           "categorySlug": "bouraci-a-vrtaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/48-KOMBINOVANE-KLADIVO-HITACHI-DH45MR-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/48-KOMBINOVANE-KLADIVO-HITACHI-DH45MR-400x400-1.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -4725,7 +4725,7 @@
           "name": "Hitachi DH38MS",
           "slug": "hitachi-dh38ms",
           "categorySlug": "bouraci-a-vrtaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/49-KOMBINOVANE-KLADIVO-HITACHI-DH-38MS-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/49-KOMBINOVANE-KLADIVO-HITACHI-DH-38MS-400x400-1.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -4770,7 +4770,7 @@
           "name": "Hitachi DH24PH",
           "slug": "hitachi-dh24ph",
           "categorySlug": "bouraci-a-vrtaci-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/50-KOMBINOVANE-KLADIVO-HITACHI-DH-24-PH-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/50-KOMBINOVANE-KLADIVO-HITACHI-DH-24-PH-400x400-1.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -4817,7 +4817,7 @@
       "name": "Svářečky",
       "slug": "svarecky",
       "path": "/pujcovna/svarecky/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/53-svarecka-PLASTU-DEDRA-400x400-1.jpg",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/53-svarecka-PLASTU-DEDRA-400x400-1.jpg",
       "productCount": 2,
       "products": [
         {
@@ -4904,7 +4904,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Kuhtreiber z kategorie Svářečky, hmotnost 52 kg, vstupní napětí 3×400 V."
         }
       ]
     },
@@ -4912,7 +4912,7 @@
       "name": "Kotvení a spojování",
       "slug": "kotveni-a-spojovani",
       "path": "/pujcovna/kotveni-a-spojovani/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/06/makita-vazacka-400x400-1.png",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/06/makita-vazacka-400x400-1.png",
       "productCount": 2,
       "products": [
         {
@@ -4966,7 +4966,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Vazač drátu AKU Makita z kategorie Kotvení a spojování, napětí 18V, průměr výstuže 10 – 16 mm, průměr drátu 0,4mm.",
           "categoryName": "Kotvení a spojování"
         },
         {
@@ -5044,7 +5044,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Rázový utahovák Hitachi z kategorie Kotvení a spojování, napětí 36 V, hmotnost 3,7 kg, upínání 19 mm (3/4”) čtyřihran.",
           "categoryName": "Kotvení a spojování"
         }
       ]
@@ -5060,7 +5060,7 @@
           "name": "Kalové čerpadlo Wacker Neuson PST2 400",
           "slug": "wackerneuson",
           "categorySlug": "cerpadla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/wacker-pst2400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/wacker-pst2400-1.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -5102,7 +5102,7 @@
           "name": "Wacker PG3",
           "slug": "wacker-pg3",
           "categorySlug": "cerpadla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/54-MOTOROVE-CERPADLO-WACKER-PG3-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/54-MOTOROVE-CERPADLO-WACKER-PG3-400x400-1.jpg",
           "specs": [
             {
               "label": "Průměr hrdla:",
@@ -5160,7 +5160,7 @@
           "name": "Remko PGM 60",
           "slug": "remko-pgm-60",
           "categorySlug": "odvlhcovac-vzduchu-topidla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/59-PLYNOVE-TOPIDLO-REMKO-PGM60-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/59-PLYNOVE-TOPIDLO-REMKO-PGM60-400x400-1.jpg",
           "specs": [
             {
               "label": "Vzduchový výkon:",
@@ -5210,7 +5210,7 @@
           "name": "Vysoušeč Master 60l/den",
           "slug": "vysousec-master-60l-den",
           "categorySlug": "odvlhcovac-vzduchu-topidla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/04/vysousec-master-60l-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/04/vysousec-master-60l-400x400-1.png",
           "specs": [
             {
               "label": "Napětí:",
@@ -5268,7 +5268,7 @@
           "name": "Master DH26",
           "slug": "master-dh26",
           "categorySlug": "odvlhcovac-vzduchu-topidla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/56-vyouusec-vzduchu-master-dh-26-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/56-vyouusec-vzduchu-master-dh-26-400x400-1.jpg",
           "specs": [
             {
               "label": "Odvhlčovací výkon:",
@@ -5313,7 +5313,7 @@
           "name": "Master B150",
           "slug": "master-b150",
           "categorySlug": "odvlhcovac-vzduchu-topidla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/57-naftove-topidlo-master-b150-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/57-naftove-topidlo-master-b150-400x400-1.jpg",
           "specs": [
             {
               "label": "Napětí:",
@@ -5366,7 +5366,7 @@
           "name": "Master B18EPR",
           "slug": "master-b18epr",
           "categorySlug": "odvlhcovac-vzduchu-topidla",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/58-elektricke-topidlo-master-b18epr-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/58-elektricke-topidlo-master-b18epr-400x400-1.jpg",
           "specs": [
             {
               "label": "Napětí:",
@@ -5409,14 +5409,14 @@
       "name": "Elektrické plošiny",
       "slug": "plosiny-a-leseni",
       "path": "/pujcovna/plosiny-a-leseni/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/Genie-GS-1532-e1552836887202-1-219x300.jpg",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/Genie-GS-1532-e1552836887202-1-219x300.jpg",
       "productCount": 14,
       "products": [
         {
           "name": "Nůžková plošina Genie GS-2646",
           "slug": "genie-gs-2646",
           "categorySlug": "plosiny-a-leseni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/kolove-nuzkove-plosiny-gs2646-genie1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/kolove-nuzkove-plosiny-gs2646-genie1.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -5466,7 +5466,7 @@
           "name": "Camac Minor P – 200",
           "slug": "camac-minor-p-200",
           "categorySlug": "plosiny-a-leseni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/62-STAVEBNI-VRATEK-CAMAC-MINOR-P-200-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/62-STAVEBNI-VRATEK-CAMAC-MINOR-P-200-400x400-1.jpg",
           "specs": [
             {
               "label": "Napětí:",
@@ -5523,7 +5523,7 @@
           "name": "Kloubová plošina Genie Z45/25",
           "slug": "kloubova-plosina-genie-z45-25",
           "categorySlug": "plosiny-a-leseni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/Genie-Z4525.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/Genie-Z4525.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -5572,7 +5572,7 @@
           "name": "Sky Jack SJ3219",
           "slug": "sky-jack-sj3219",
           "categorySlug": "plosiny-a-leseni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/61-NUZKOVA-PLOSINA-SKY-JACK-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/61-NUZKOVA-PLOSINA-SKY-JACK-400x400-1.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -5625,7 +5625,7 @@
           "name": "Safe T PRO 150",
           "slug": "safe-t-pro-150",
           "categorySlug": "plosiny-a-leseni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/60-POJIZDNE-LESENI-SAFE-T-PRO-150-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/60-POJIZDNE-LESENI-SAFE-T-PRO-150-400x400-1.jpg",
           "specs": [],
           "pricing": [
             {
@@ -5761,7 +5761,7 @@
           "name": "Splift 180T",
           "slug": "leo-13gt",
           "categorySlug": "plosiny-a-leseni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/Pasova-plosina-LEO-13GT-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/Pasova-plosina-LEO-13GT-400x400-1.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška",
@@ -5810,7 +5810,7 @@
           "name": "Přívěsná plošina Nifty 120T",
           "slug": "privesna-plosina-nifty-120t",
           "categorySlug": "plosiny-a-leseni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/06/NIFTY-120T400x400.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/06/NIFTY-120T400x400.png",
           "specs": [
             {
               "label": "Pracovní výška:",
@@ -6019,13 +6019,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Haulotte H12 sx z kategorie Elektrické plošiny, hmotnost 5510 kg, nosnost 700 kg, pracovní výška 12 m."
         },
         {
           "name": "Haulotte 16m",
           "slug": "haulotte-16m",
           "categorySlug": "plosiny-a-leseni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/haulot-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/haulot-400x400-1.png",
           "specs": [
             {
               "label": "Pracovní výška",
@@ -6088,13 +6088,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Haulotte 16m z kategorie Elektrické plošiny, hmotnost 7 240 kg, nosnost 230 kg, pracovní výška 16 m."
         },
         {
           "name": "Vnitřní pojízdné lešení",
           "slug": "vnitrni-pojizdne-leseni",
           "categorySlug": "plosiny-a-leseni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/pojizdne-leseni-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/pojizdne-leseni-400x400-1.png",
           "specs": [
             {
               "label": "Šířka:",
@@ -6133,7 +6133,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Vnitřní pojízdné lešení z kategorie Elektrické plošiny, šířka 90 cm, výška 3 m."
         },
         {
           "name": "Nůžková terénní plošina Genie GS 3369",
@@ -6206,7 +6206,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Nůžková terénní plošina Genie GS 3369 z kategorie Elektrické plošiny, hmotnost 3 557 kg, nosnost 454 kg, pracovní výška 11,96 m."
         },
         {
           "name": "Plošina Nifty 150T",
@@ -6271,13 +6271,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Plošina Nifty 150T z kategorie Elektrické plošiny, hmotnost 1 725 kg, max. pracovní výška 14,7 m, nosnost (kg) 225 kg."
         },
         {
           "name": "Genie Z-60 Terénní kloubová plošina",
           "slug": "genie-z-60-terenni-kloubova-plosina",
           "categorySlug": "plosiny-a-leseni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/03/genie-Z60-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/03/genie-Z60-400x400-1.png",
           "specs": [
             {
               "label": "Pracovní výška:",
@@ -6344,7 +6344,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Genie Z-60 Terénní kloubová plošina z kategorie Elektrické plošiny, hmotnost 10 215 kg, nosnost 227 kg, pracovní výška 20,39 m."
         }
       ]
     },
@@ -6359,7 +6359,7 @@
           "name": "Nůžková dieselová plošina Genie GS-3369 RT",
           "slug": "nuzkova-dieselova-plosina-genie-gs-3369-rt",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/l_1774_genie-gs-3369-rt-1024x576.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/l_1774_genie-gs-3369-rt-1024x576.jpg",
           "specs": [
             {
               "label": "Rozměry (d / š / v)",
@@ -6413,7 +6413,7 @@
           "name": "Nůžková dieselová plošina Genie GS-3390 RT",
           "slug": "nuzkova-dieselova-plosina-genie-gs-3390-rt",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/genie-gs-3390-1024x769-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/genie-gs-3390-1024x769-1.jpg",
           "specs": [
             {
               "label": "Rozměry",
@@ -6467,7 +6467,7 @@
           "name": "Nůžková dieselová plošina Genie GS-4069 RT",
           "slug": "nuzkova-dieselova-plosina-genie-gs-4069-rt",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/4069rt-1-15499866167016_0x0_ff_90.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/4069rt-1-15499866167016_0x0_ff_90.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -6517,7 +6517,7 @@
           "name": "Nůžková dieselová plošina Genie GS-4390 RT",
           "slug": "nuzkova-dieselova-plosina-genie-gs-4390-rt",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/BOOM-Genie-4390-S1-600-Web_OP.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/BOOM-Genie-4390-S1-600-Web_OP.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -6567,7 +6567,7 @@
           "name": "Nůžková dieselová plošina Genie GS-5390 RT",
           "slug": "nuzkova-dieselova-plosina-genie-gs-5390-rt",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/Genie-GS-5390.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/Genie-GS-5390.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -6617,7 +6617,7 @@
           "name": "Kloubová dieselová plošina Genie Z 45/25J RT",
           "slug": "kloubova-dieselova-plosina-genie-z-45-25j-rt",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/z-4525rt-cutout-1-15450381731861.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/z-4525rt-cutout-1-15450381731861.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -6667,7 +6667,7 @@
           "name": "Kloubová dieselová plošina Genie Z 51/30J RT",
           "slug": "kloubova-dieselova-plosina-genie-z-51-30j-rt",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/z51-30jrt-602x800-15450386205998_1024x768_ff_90.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/z51-30jrt-602x800-15450386205998_1024x768_ff_90.png",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -6717,7 +6717,7 @@
           "name": "Kloubová dieselová plošina Genie Z 62/40",
           "slug": "kloubova-dieselova-plosina-genie-z-62-40",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/Z-60-FE_cut-out_2-2.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/Z-60-FE_cut-out_2-2.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -6767,7 +6767,7 @@
           "name": "Kloubová dieselová plošina Genie Z 80/60",
           "slug": "kloubova-dieselova-plosina-genie-z-80-60",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/genie-z80-60-1024x1024.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/genie-z80-60-1024x1024.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -6817,7 +6817,7 @@
           "name": "Teleskopická dieselová plošina Genie S65",
           "slug": "teleskopicka-dieselova-plosina-genie-s65",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/Genie-S65-1024x854.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/Genie-S65-1024x854.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -6867,7 +6867,7 @@
           "name": "Teleskopická dieselová plošina Genie S85",
           "slug": "teleskopicka-dieselova-plosina-genie-s85",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/s-85xc_cutout-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/s-85xc_cutout-1.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -6917,7 +6917,7 @@
           "name": "Kloubová plošina Genie Z30/20N RJ",
           "slug": "kloubova-plosina-genie-z30-20n-rj",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/b-prodotti-65092-reladadf6d5864340b7b76fc8a097cfdc28-15505922328766_0x0_ff_90.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/b-prodotti-65092-reladadf6d5864340b7b76fc8a097cfdc28-15505922328766_0x0_ff_90.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -6966,7 +6966,7 @@
           "name": "Kloubová plošina Genie Z33/18",
           "slug": "kloubova-plosina-genie-z33-18",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/genie-z33-18-elevated-1024x1024.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/genie-z33-18-elevated-1024x1024.png",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7015,7 +7015,7 @@
           "name": "Kloubová plošina Genie Z34/22N",
           "slug": "kloubova-plosina-genie-z34-22n",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/z-3422ic_cutout-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/z-3422ic_cutout-1.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7113,7 +7113,7 @@
           "name": "Kloubová plošina Genie Z45/25J DC",
           "slug": "kloubova-plosina-genie-z45-25j-dc",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/z-4525-cutout-1-15450395600118_700x400_ft_90.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/z-4525-cutout-1-15450395600118_700x400_ft_90.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7162,7 +7162,7 @@
           "name": "Nůžková plošina Genie GS-1532",
           "slug": "nuzkova-plosina-genie-gs-1532",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/Genie-GS-1532-e1552836887202-748x1024.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/Genie-GS-1532-e1552836887202-748x1024.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7211,7 +7211,7 @@
           "name": "Nůžková plošina Genie GS-1932",
           "slug": "nuzkova-plosina-genie-gs-1932",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/l_793_genie-gs1932.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/l_793_genie-gs1932.png",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7260,7 +7260,7 @@
           "name": "Nůžková plošina Genie GS-2032",
           "slug": "nuzkova-plosina-genie-gs-2032",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/GEN-GS2032-2-830x566-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/GEN-GS2032-2-830x566-1.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7309,7 +7309,7 @@
           "name": "Nůžková plošina Genie GS-3232",
           "slug": "nuzkova-plosina-genie-gs-3232",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/350131.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/350131.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7358,7 +7358,7 @@
           "name": "Nůžková plošina Genie GS-3246",
           "slug": "nuzkova-plosina-genie-gs-3246",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/GS-3246-002-1500x944-1-1024x644.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/GS-3246-002-1500x944-1-1024x644.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7407,7 +7407,7 @@
           "name": "Nůžková plošina Genie GS-4047",
           "slug": "nuzkova-plosina-genie-gs-4047",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/genie-scissor-lift-gs-4047-1-scaled-1-1024x930.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/genie-scissor-lift-gs-4047-1-scaled-1-1024x930.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7456,7 +7456,7 @@
           "name": "Nůžková plošina Genie GS-4069 DC",
           "slug": "nuzkova-plosina-genie-gs-4069-dc",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/geniegs4069dcslabscissorliftside.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/geniegs4069dcslabscissorliftside.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7505,7 +7505,7 @@
           "name": "Nůžková plošina Genie GS-4655",
           "slug": "nuzkova-plosina-genie-gs-4655",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/gs-4655-cutout-15741754309279.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/gs-4655-cutout-15741754309279.png",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7554,7 +7554,7 @@
           "name": "Sloupcová plošina Genie GR26 J",
           "slug": "sloupcova-plosina-genie-gr26-j",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/GR26J-001-1024x644.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/GR26J-001-1024x644.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7603,7 +7603,7 @@
           "name": "Teleskopická dieselová plošina Genie S105",
           "slug": "teleskopicka-dieselova-plosina-genie-s105",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/genie-s-105.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2024/10/genie-s-105.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7652,7 +7652,7 @@
           "name": "Nůžková plošina Genie GS-2632",
           "slug": "nuzkova-plosina-genie-gs-2632",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2025/02/GS-2632-Stowed-2.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2025/02/GS-2632-Stowed-2.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7701,7 +7701,7 @@
           "name": "Přívěsná plošina Nifty 150t",
           "slug": "privesna-plosina-nifty-150t",
           "categorySlug": "dieselove-plosiny",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2025/04/20febb83383573e0aed2c992da9c062e.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2025/04/20febb83383573e0aed2c992da9c062e.jpg",
           "specs": [
             {
               "label": "Maximální pracovní výška:",
@@ -7759,7 +7759,7 @@
           "name": "Termovizní kamera",
           "slug": "termovizni-kamera",
           "categorySlug": "merici-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/kamera-termovizorni-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/kamera-termovizorni-400x400-1.png",
           "specs": [],
           "pricing": [
             {
@@ -7789,14 +7789,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Termovizní kamera z kategorie Měřící technika.",
           "categoryName": "Měřící technika"
         },
         {
           "name": "Testo 606 – 1",
           "slug": "testo-606-1",
           "categorySlug": "merici-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/64-MERIC-VLHKOSTI-DREVA-TESTO-606-1-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/64-MERIC-VLHKOSTI-DREVA-TESTO-606-1-400x400-1.jpg",
           "specs": [],
           "pricing": [
             {
@@ -7832,7 +7832,7 @@
           "name": "Rotační laser Geo Fenel FL 265 HV",
           "slug": "rotacni-laser-geo-fenel-fl-265-hv",
           "categorySlug": "merici-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/Rotacni-laser-GEOFENNEL.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/Rotacni-laser-GEOFENNEL.jpg",
           "specs": [
             {
               "label": "Přesnost:",
@@ -7893,7 +7893,7 @@
           "name": "Topcon AT – B4",
           "slug": "topcon-at-b4",
           "categorySlug": "merici-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/63-Nivelak-Topcon-AT-B4-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/63-Nivelak-Topcon-AT-B4-400x400-1.jpg",
           "specs": [
             {
               "label": "Přesnost:",
@@ -7976,7 +7976,7 @@
       "name": "Zahradní technika",
       "slug": "zahradni-technika",
       "path": "/pujcovna/zahradni-technika/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/75-vertikutator-weibang-400x400-1.jpg",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/75-vertikutator-weibang-400x400-1.jpg",
       "productCount": 17,
       "products": [
         {
@@ -8398,14 +8398,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH, V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email: Vaše jméno (vyžadováno) Váš e-mail (vyžadováno) Jaký stroj/nářadí si chcete zapůjčit? Vaše zpráva Δ /* <![CDATA[ */ document.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Zahradní ruční válec z kategorie Zahradní technika, hmotnost 150 kg.",
           "categoryName": "Zahradní technika"
         },
         {
           "name": "Zametací stroj Stiga SWS 800 G",
           "slug": "zametaci-stroj-stiga-sws-800-g",
           "categorySlug": "zahradni-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/Zametaci-stroj-stiga.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/Zametaci-stroj-stiga.jpg",
           "specs": [
             {
               "label": "Výkon:",
@@ -8459,7 +8459,7 @@
           "name": "Štěpkovač Green Mech 150",
           "slug": "stepkovac-green-mech-150",
           "categorySlug": "zahradni-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2025/04/greenmech_arborist_150d_max.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2025/04/greenmech_arborist_150d_max.jpg",
           "specs": [
             {
               "label": "Počet nožů",
@@ -8694,13 +8694,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Bubnová sekačka Vari z kategorie Zahradní technika."
         },
         {
           "name": "Mulčovač trávy Weibang",
           "slug": "mulcovac-travy-weibang",
           "categorySlug": "zahradni-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/06/sekacka-weibang-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/06/sekacka-weibang-400x400-1.png",
           "specs": [],
           "pricing": [
             {
@@ -8730,13 +8730,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Mulčovač trávy Weibang z kategorie Zahradní technika."
         },
         {
           "name": "Sekačka na trávu Weibang",
           "slug": "sekacka-na-travu-weibang",
           "categorySlug": "zahradni-technika",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/06/weibang-neco-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/06/weibang-neco-400x400-1.png",
           "specs": [],
           "pricing": [
             {
@@ -8766,7 +8766,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Sekačka na trávu Weibang z kategorie Zahradní technika."
         }
       ]
     },
@@ -8781,7 +8781,7 @@
           "name": "Karcher Puzzi",
           "slug": "karcher-puzzi",
           "categorySlug": "vysavace-a-cistice",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/81-TEPOVAC-KARCHER-PUZZI-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/81-TEPOVAC-KARCHER-PUZZI-400x400-1.jpg",
           "specs": [
             {
               "label": "Sací výkon:",
@@ -8822,7 +8822,7 @@
           "name": "Hitachi AW150",
           "slug": "hitachi-aw150",
           "categorySlug": "vysavace-a-cistice",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/82-TLAKOVA-MYCKA-HITACHI-AW150-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/82-TLAKOVA-MYCKA-HITACHI-AW150-400x400-1.jpg",
           "specs": [
             {
               "label": "Napětí:",
@@ -8871,7 +8871,7 @@
           "name": "Starmix L – 1635 EHP",
           "slug": "starmix-l-1635-ehp",
           "categorySlug": "vysavace-a-cistice",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/80-Prumyslovy-vysavac-starmix-l-1635-ehp-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/80-Prumyslovy-vysavac-starmix-l-1635-ehp-400x400-1.jpg",
           "specs": [
             {
               "label": "Objem:",
@@ -8916,7 +8916,7 @@
           "name": "Wacker HD 8/23G",
           "slug": "wacker-hd-8-23g",
           "categorySlug": "vysavace-a-cistice",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/Vysokotlaky-cistic-Wacker-HD-8-23-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/08/Vysokotlaky-cistic-Wacker-HD-8-23-400x400-1.png",
           "specs": [
             {
               "label": "Průtok:",
@@ -8971,7 +8971,7 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Wacker HD 8/23G z kategorie Vysavače a čističe, hmotnost 59 kg, průtok 800 l/h, pracovní tlak 230/23 (bar/MPa)."
         }
       ]
     },
@@ -8979,7 +8979,7 @@
       "name": "Úprava betonu",
       "slug": "uprava-betonu",
       "path": "/pujcovna/uprava-betonu/",
-      "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/84-vibrator-do-betonu-400x400-1.jpg",
+      "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/84-vibrator-do-betonu-400x400-1.jpg",
       "productCount": 2,
       "products": [
         {
@@ -9032,11 +9032,11 @@
           "name": "compact-165",
           "slug": "compact-165",
           "categorySlug": "uprava-betonu",
-          "image": null,
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/84-vibrator-do-betonu-400x400-1.jpg",
           "specs": [],
           "pricing": [],
           "pricingNote": null,
-          "description": null
+          "description": "compact-165 z kategorie Úprava betonu."
         }
       ]
     },
@@ -9051,7 +9051,7 @@
           "name": "Gril na sele",
           "slug": "gril-na-sele",
           "categorySlug": "volny-cas",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/Gril-na-sele-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/Gril-na-sele-400x400-1.png",
           "specs": [],
           "pricing": [
             {
@@ -9065,14 +9065,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Gril na sele z kategorie Volný čas.",
           "categoryName": "Volný čas"
         },
         {
           "name": "Výčepní zařízení",
           "slug": "vycepni-zarizeni",
           "categorySlug": "volny-cas",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/87-vycepni-zarizeni-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/87-vycepni-zarizeni-400x400-1.jpg",
           "specs": [
             {
               "label": "Hmotnost:",
@@ -9109,7 +9109,7 @@
           "name": "Nosič kol na tažné zařízení",
           "slug": "nosic-kol-na-tazne-zarizeni",
           "categorySlug": "volny-cas",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/86-nosic-na-tazke-zarizeni-pro-3-kola-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/86-nosic-na-tazke-zarizeni-pro-3-kola-400x400-1.jpg",
           "specs": [
             {
               "label": "Maximální nosnost:",
@@ -9159,7 +9159,7 @@
           "name": "Zvedák sádrokartonových desek",
           "slug": "zvedak-sadrokartonovych-desek",
           "categorySlug": "ostatni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/Zvedak-sadrokartonovych-desek-400x400-1.png",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2023/10/Zvedak-sadrokartonovych-desek-400x400-1.png",
           "specs": [],
           "pricing": [
             {
@@ -9189,14 +9189,14 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:",
+          "description": "Zvedák sádrokartonových desek z kategorie Ostatní.",
           "categoryName": "Ostatní"
         },
         {
           "name": "Michelin",
           "slug": "michelin",
           "categorySlug": "ostatni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/88-pistovy-kompresor-michelin-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/88-pistovy-kompresor-michelin-400x400-1.jpg",
           "specs": [
             {
               "label": "Maximální pracovní tlak:",
@@ -9245,7 +9245,7 @@
           "name": "Triden",
           "slug": "triden",
           "categorySlug": "ostatni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/89-paletovy-vozik-triden-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/89-paletovy-vozik-triden-400x400-1.jpg",
           "specs": [
             {
               "label": "Nosnost:",
@@ -9286,7 +9286,7 @@
           "name": "Wiola",
           "slug": "wiola",
           "categorySlug": "ostatni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/90-privesny-vozik-wiola-400x400-1.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2020/10/90-privesny-vozik-wiola-400x400-1.jpg",
           "specs": [
             {
               "label": "Nosnost:",
@@ -9317,13 +9317,13 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Wiola z kategorie Ostatní, nosnost 750 kg."
         },
         {
           "name": "Vezeko R2B2X",
           "slug": "vezeko-r2b2x",
           "categorySlug": "ostatni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/Vezeko-do-3500kg.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/Vezeko-do-3500kg.jpg",
           "specs": [],
           "pricing": [
             {
@@ -9355,7 +9355,7 @@
           "name": "Vezeko R2B1X",
           "slug": "vezeko-r2b1x",
           "categorySlug": "ostatni",
-          "image": "http://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/Vezeko-do-1800kg.jpg",
+          "image": "https://www.pujcovnavendryne.cz/wp-content/uploads/2022/05/Vezeko-do-1800kg.jpg",
           "specs": [],
           "pricing": [
             {
@@ -9381,9 +9381,10 @@
             }
           ],
           "pricingNote": "Cena je uvedena za jeden kalendářní den bez DPH.",
-          "description": "V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:"
+          "description": "Vezeko R2B1X z kategorie Ostatní."
         }
       ]
     }
-  ]
+  ],
+  "fixedAt": "2026-10-23T16:48:50.320Z"
 }

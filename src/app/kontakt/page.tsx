@@ -1,20 +1,24 @@
+import type { Metadata } from "next";
+import { LazyMap } from "@/components/LazyMap";
+import { RentalForm } from "@/components/RentalForm";
 import { site } from "@/data/site";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Kontakt",
+  description: `Kontakt ${site.name}: ${site.phone}, ${site.address}. ${site.hours.weekdays}, ${site.hours.saturday}.`,
 };
 
 export default function KontaktPage() {
   return (
     <div className="pb-16 pt-10 md:pb-20 md:pt-12">
       <div className="container-pv">
-        <h1 className="page-heading text-3xl font-bold tracking-tight text-ink md:text-4xl">
+        <h1 className="page-heading text-3xl font-bold tracking-tight md:text-4xl">
           Kontakt
         </h1>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
-          <div className="rounded-[20px] border border-line bg-white p-6 md:p-8">
-            <h2 className="text-lg font-semibold text-ink">Kontaktní údaje:</h2>
+          <div className="surface-panel p-6 md:p-8">
+            <h2 className="text-lg font-semibold text-ink">Kontaktní údaje</h2>
             <dl className="mt-5 space-y-3 text-sm">
               <div>
                 <dt className="text-muted">IČO</dt>
@@ -26,6 +30,7 @@ export default function KontaktPage() {
                   <a
                     href={`tel:${site.phone.replace(/\s/g, "")}`}
                     className="font-medium text-brand hover:underline"
+                    data-track="tel-kontakt"
                   >
                     {site.phone}
                   </a>
@@ -54,27 +59,22 @@ export default function KontaktPage() {
                 <dd className="font-medium text-ink">{site.address}</dd>
               </div>
             </dl>
-
-            <div className="mt-8 rounded-[16px] bg-surface p-5">
-              <h3 className="font-semibold text-ink">Otevírací doba</h3>
-              <ul className="mt-2 space-y-1 text-sm text-muted">
-                <li>{site.hours.weekdays},</li>
-                <li>{site.hours.saturday},</li>
-                <li>{site.hours.sunday}</li>
-              </ul>
-            </div>
           </div>
 
-          <div className="rounded-[22px] bg-brand p-2 shadow-[0_12px_40px_rgba(229,50,45,0.18)] md:p-2.5">
-            <div className="overflow-hidden rounded-[16px] border-[3px] border-white bg-white">
-              <iframe
-                title={site.address}
-                src={`https://maps.google.com/maps?q=${encodeURIComponent(site.address)}&z=15&output=embed`}
-                className="h-full min-h-[420px] w-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+          <div className="map-frame bg-brand p-2 md:p-2.5">
+            <div className="map-frame-inner overflow-hidden border-[3px] border-white bg-white">
+              <LazyMap minHeight={420} />
             </div>
+          </div>
+        </div>
+
+        <div className="surface-panel mt-12 p-6 md:p-8">
+          <h2 className="text-lg font-semibold text-ink">Poptávka půjčení</h2>
+          <p className="mt-2 text-sm text-muted">
+            Stejný formulář jako na stránce Půjčit — zatím bez odesílání.
+          </p>
+          <div className="mt-6">
+            <RentalForm />
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import {
   categories,
   getCategory,
@@ -18,10 +20,22 @@ export function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category, product } = await params;
   const item = getProduct(category, product);
-  return { title: item?.name ?? "Stroj" };
+  const cat = getCategory(category);
+  if (!item) return { title: "Stroj" };
+  return {
+    title: item.name,
+    description:
+      item.description ??
+      `${item.name} k půjčení — ${cat?.name ?? ""} | ${site.name}`,
+    openGraph: {
+      title: `${item.name} | ${site.name}`,
+      description: item.description ?? undefined,
+      images: item.image ? [{ url: item.image }] : undefined,
+    },
+  };
 }
 
 export default async function ProductPage({ params }: Props) {
@@ -30,23 +44,24 @@ export default async function ProductPage({ params }: Props) {
   const product = getProduct(categorySlug, productSlug);
   if (!category || !product) notFound();
 
+  const rentHref = `/pujcit?stroj=${encodeURIComponent(
+    `${category.name} — ${product.name}`
+  )}`;
+
   return (
     <div className="pb-16 pt-10 md:pb-20 md:pt-12">
       <div className="container-pv">
-        <nav className="text-sm text-muted">
-          <Link href="/pujcovna" className="hover:text-brand">
-            Půjčovna
-          </Link>
-          <span className="mx-2">/</span>
-          <Link href={`/pujcovna/${category.slug}`} className="hover:text-brand">
-            {category.name}
-          </Link>
-          <span className="mx-2">/</span>
-          <span className="text-ink">{product.name}</span>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { href: "/", label: "Úvod" },
+            { href: "/pujcovna", label: "Půjčovna" },
+            { href: `/pujcovna/${category.slug}`, label: category.name },
+            { label: product.name },
+          ]}
+        />
 
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_1fr]">
-          <div className="relative aspect-square overflow-hidden rounded-[20px] border border-line bg-white lg:aspect-[4/3]">
+          <div className="relative aspect-square overflow-hidden rounded-[var(--radius-lg)] border border-line bg-white lg:aspect-[4/3]">
             {product.image ? (
               <Image
                 src={product.image}
@@ -60,18 +75,18 @@ export default async function ProductPage({ params }: Props) {
           </div>
 
           <div>
-            <p className="page-meta text-sm font-medium text-muted">{category.name}</p>
-            <h1 className="page-heading mt-2 text-3xl font-bold tracking-tight text-ink md:text-4xl">
+            <p className="page-meta text-sm font-medium">{category.name}</p>
+            <h1 className="page-heading mt-2 text-3xl font-bold tracking-tight md:text-4xl">
               {product.name}
             </h1>
             {product.description ? (
-              <p className="page-meta mt-4 text-base leading-relaxed text-muted">
+              <p className="mt-4 text-base leading-relaxed text-white/80">
                 {product.description}
               </p>
             ) : null}
 
             {product.specs.length > 0 ? (
-              <div className="mt-8 overflow-hidden rounded-[16px] border border-line">
+              <div className="surface-panel mt-8 overflow-hidden">
                 <table className="w-full text-sm">
                   <tbody>
                     {product.specs.map((spec) => (
@@ -79,7 +94,7 @@ export default async function ProductPage({ params }: Props) {
                         <th className="w-[42%] bg-surface px-4 py-3 text-left font-medium text-ink">
                           {spec.label}
                         </th>
-                        <td className="px-4 py-3 text-muted">{spec.value}</td>
+                        <td className="bg-white px-4 py-3 text-muted">{spec.value}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -89,14 +104,14 @@ export default async function ProductPage({ params }: Props) {
 
             {product.pricing.length > 0 ? (
               <div className="mt-8">
-                <h2 className="text-lg font-semibold text-ink">Cena vypůjčení</h2>
-                <div className="mt-3 overflow-x-auto rounded-[16px] border border-line">
+                <h2 className="text-lg font-semibold text-white">Cena vypůjčení</h2>
+                <div className="surface-panel mt-3 overflow-x-auto">
                   <table className="w-full min-w-[520px] text-sm">
                     <thead>
                       <tr className="bg-surface text-left">
-                        <th className="px-4 py-3 font-medium">Doba vypůjčení</th>
+                        <th className="px-4 py-3 font-medium text-ink">Doba vypůjčení</th>
                         {product.pricing[0]?.prices.map((p) => (
-                          <th key={p.period} className="px-4 py-3 font-medium">
+                          <th key={p.period} className="px-4 py-3 font-medium text-ink">
                             {p.period}
                           </th>
                         ))}
@@ -104,7 +119,7 @@ export default async function ProductPage({ params }: Props) {
                     </thead>
                     <tbody>
                       {product.pricing.map((row) => (
-                        <tr key={row.label} className="border-t border-line">
+                        <tr key={row.label} className="border-t border-line bg-white">
                           <td className="px-4 py-3 font-medium text-ink">{row.label}</td>
                           {row.prices.map((p) => (
                             <td key={p.period} className="px-4 py-3 text-muted">
@@ -117,28 +132,29 @@ export default async function ProductPage({ params }: Props) {
                   </table>
                 </div>
                 {product.pricingNote ? (
-                  <p className="mt-3 text-sm text-muted">{product.pricingNote}</p>
+                  <p className="page-meta mt-3 text-sm">{product.pricingNote}</p>
                 ) : null}
               </div>
             ) : null}
 
-            <div className="mt-8 rounded-[18px] bg-surface p-5">
+            <div className="surface-panel mt-8 p-5">
               <p className="text-sm leading-relaxed text-muted">
-                V případě zájmu nás kontaktujte přes kontaktní formulář, telefonicky či email:
+                Zavolejte, napište, nebo rovnou vyplňte poptávku na půjčení.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
                 <a
                   href={`tel:${site.phone.replace(/\s/g, "")}`}
                   className="btn btn-primary"
+                  data-track="tel-product"
                 >
                   Tel: {site.phoneDisplay}
                 </a>
-                <a href={`mailto:${site.email}`} className="btn btn-dark">
+                <Link href={rentHref} className="btn btn-dark">
+                  Půjčit / poptávka
+                </Link>
+                <a href={`mailto:${site.email}`} className="btn border border-line bg-white text-ink">
                   E-mail
                 </a>
-                <Link href="/kontakt" className="btn border border-line bg-white text-ink">
-                  Kontakt
-                </Link>
               </div>
             </div>
           </div>
