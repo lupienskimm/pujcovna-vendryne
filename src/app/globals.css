@@ -384,20 +384,11 @@ img {
 /* —— Page backgrounds + pattern overlay —— */
 html {
   --pattern-opacity: 0.7;
-  --pattern-color: #141414;
+  --pattern-color: #ffffff;
 }
 
-html[data-bg="white"] body {
-  background-color: #ffffff;
-  background-image: none;
-}
-
-html[data-bg="red"] body {
-  background-color: #e5322d;
-  background-image: none;
-}
-
-html[data-bg="black"] body {
+html[data-bg="black"] body,
+body {
   background-color: #121212;
   background-image: none;
 }
@@ -417,17 +408,17 @@ body::before {
 html[data-pattern="dots"] body::before {
   background-image: radial-gradient(
     circle,
-    var(--pattern-color) 1.45px,
-    transparent 1.55px
+    var(--pattern-color) 0.85px,
+    transparent 0.95px
   );
-  background-size: 22px 22px;
+  background-size: 12px 12px;
 }
 
 html[data-pattern="grid"] body::before {
   background-image:
     linear-gradient(var(--pattern-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--pattern-color) 1px, transparent 1px);
-  background-size: 36px 36px;
+  background-size: 12px 12px;
 }
 
 .site-shell {
@@ -449,15 +440,12 @@ html[data-pattern="grid"] body::before {
 }
 
 /* Text on colored full-page backgrounds (outside white cards/sections) */
-html[data-layout="page"][data-bg="red"] .section-title,
-html[data-layout="page"][data-bg="black"] .section-title,
-html[data-layout="page"][data-bg="red"] .page-heading,
-html[data-layout="page"][data-bg="black"] .page-heading {
+html[data-bg="black"] .section-title,
+html[data-bg="black"] .page-heading {
   color: #fff;
 }
 
-html[data-layout="page"][data-bg="red"] .page-meta,
-html[data-layout="page"][data-bg="black"] .page-meta {
+html[data-bg="black"] .page-meta {
   color: rgba(255, 255, 255, 0.78);
 }
 
