@@ -707,7 +707,11 @@ a.page-nav-btn {
 }
 
 .rental-price-aside {
-  min-width: 0;
+  min-width: 11rem;
+  min-height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .rental-price-label {
@@ -716,6 +720,7 @@ a.page-nav-btn {
   font-weight: 600;
   color: var(--muted);
   line-height: 1.3;
+  min-height: 1rem;
 }
 
 .rental-price-value {
@@ -725,6 +730,12 @@ a.page-nav-btn {
   color: var(--brand);
   line-height: 1.2;
   letter-spacing: -0.02em;
+  min-height: 1.65rem;
+}
+
+.rental-price-placeholder {
+  color: var(--muted);
+  opacity: 0.55;
 }
 
 .rental-price-note,
@@ -732,6 +743,134 @@ a.page-nav-btn {
   margin: 0.2rem 0 0;
   font-size: 0.75rem;
   font-weight: 500;
+  color: var(--muted);
+  min-height: 1rem;
+}
+
+.avail-cal {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  padding: 1rem;
+}
+
+.avail-cal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.avail-cal-title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: capitalize;
+}
+
+.avail-cal-nav {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--line);
+  background: #fff;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.avail-cal-nav:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.avail-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.avail-cal-dow {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--muted);
+  padding-bottom: 0.25rem;
+}
+
+.avail-cal-day {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: #f3f3f3;
+}
+
+.avail-cal-day.is-free:hover {
+  border-color: var(--brand);
+}
+
+.avail-cal-day.is-busy {
+  background: color-mix(in srgb, var(--brand) 18%, white);
+  color: var(--brand);
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+.avail-cal-day.is-past {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.avail-cal-day.is-range {
+  background: color-mix(in srgb, var(--brand) 12%, white);
+}
+
+.avail-cal-day.is-edge {
+  background: var(--brand);
+  color: #fff;
+}
+
+.avail-cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 0.85rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.avail-cal-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.avail-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #ddd;
+}
+
+.avail-dot.is-free {
+  background: #bbb;
+}
+
+.avail-dot.is-busy {
+  background: var(--brand);
+}
+
+.avail-dot.is-range {
+  background: color-mix(in srgb, var(--brand) 55%, white);
+}
+
+.avail-cal-hint {
+  margin: 0.55rem 0 0;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 
