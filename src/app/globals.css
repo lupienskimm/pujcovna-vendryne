@@ -408,17 +408,10 @@ body::before {
 html[data-pattern="dots"] body::before {
   background-image: radial-gradient(
     circle,
-    var(--pattern-color) 0.85px,
-    transparent 0.95px
+    var(--pattern-color) 1.45px,
+    transparent 1.55px
   );
-  background-size: 12px 12px;
-}
-
-html[data-pattern="grid"] body::before {
-  background-image:
-    linear-gradient(var(--pattern-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--pattern-color) 1px, transparent 1px);
-  background-size: 12px 12px;
+  background-size: 22px 22px;
 }
 
 .site-shell {
