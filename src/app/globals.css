@@ -537,6 +537,42 @@ footer {
   resize: vertical;
 }
 
+.rental-submit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+
+.rental-price-aside {
+  min-width: 0;
+}
+
+.rental-price-label {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.rental-price-value {
+  margin: 0.15rem 0 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--brand);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.rental-price-note,
+.rental-price-hint {
+  margin: 0.2rem 0 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
 .card-cta-btn {
   display: inline-flex;
   align-items: center;
